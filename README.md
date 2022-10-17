@@ -1,4 +1,4 @@
 # BTa
 workin title: BudgetTrackAnalyze
 
-Web App that allows you to track and analyze your mothly home budget
+web app that allows you to Track and Analyze your monthly home Budget
