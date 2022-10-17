@@ -1,0 +1,21 @@
+.Logo {
+  position: relative;
+  padding-bottom: 3rem;
+
+  &__name {
+    font-family: 'Poppins', sans-serif;
+    color: #041E24;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 2rem;
+
+    &::before {
+      content: url("../../images/icon-logo.png");
+      font-size: 36px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-110%, -5%);
+    }
+  }
+}
