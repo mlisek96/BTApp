@@ -1,11 +1,27 @@
 import { NavLink } from "react-router-dom";
+import { IconHome } from '@tabler/icons';
+import { IconListDetails } from '@tabler/icons';
+import { ButtonAddExpense } from "../ButtonAddExpense/ButtonAddExpense.jsx";
+import './Menu.scss'
 
 export function Menu() {
     return (
         <ul className="Menu">
-            <li><NavLink className="Menu__item">Add Expense</NavLink></li>
-            <li><NavLink className="Menu__item">Main Page</NavLink></li>
-            <li><NavLink className="Menu__item">Expenses List</NavLink></li>
+            <li>
+                <ButtonAddExpense />
+            </li>
+            <li>
+                <NavLink className="Menu__item" to="/">
+                    <IconHome className="Menu__icon"/>
+                    Main Page
+                </NavLink>
+            </li>
+            <li>
+                <NavLink className="Menu__item" to="/expenses-list">
+                    <IconListDetails className='Menu__icon'/>
+                    Expenses List
+                </NavLink>
+            </li>
         </ul>
     )
 }

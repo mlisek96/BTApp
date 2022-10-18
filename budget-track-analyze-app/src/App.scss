@@ -1,3 +1,11 @@
-:root {
-  font-family: 'Poppins', sans-serif;
-}
+@import "scss/generic/reset";
+
+@import "scss/settings/dimensions";
+@import "scss/settings/colors";
+@import "scss/settings/fonts";
+
+//body {
+//  background-image: url("./images/picture-background-3.jpg");
+//  background-size: contain;
+//  background-repeat: repeat-x;
+//}

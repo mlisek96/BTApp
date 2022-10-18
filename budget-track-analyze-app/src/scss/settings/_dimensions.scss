@@ -1,6 +1,9 @@
-$container-size: 1300px;
+$container-width: 81.25rem;
+$container-height: 90vh;
 
 .container {
-  max-width: $container-size;
+  max-width: $container-width;
+  max-height: $container-height;
+  //max-height: 70vh;
   margin: 0 auto;
 }
