@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import {PageHeader} from "../PageHeader";
 import {PageFooter} from "../PageFooter";
-import './Layout.scss'
+import './_Layout.scss'
 
 export function Layout() {
     return (
