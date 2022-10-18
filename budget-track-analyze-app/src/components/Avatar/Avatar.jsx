@@ -1,9 +1,10 @@
+import { Avatar } from '@mantine/core';
 import './Avatar.scss'
 
-export function Avatar() {
+export function AvatarLogo() {
     return (
         <div className="Avatar">
-            <div className='Avatar__picture'/>
+            <Avatar className='Avatar__icon' radius="xl" alt='no image here'/>
             <h1 className='Avatar__text'>Hello,</h1>
             <h1 className='Avatar__text'>name!</h1>
         </div>
