@@ -4,10 +4,10 @@
 
   &__name {
     font-family: 'Poppins', sans-serif;
-    color: #041E24;
     font-weight: 400;
     text-decoration: none;
     font-size: 2rem;
+    color: #ffffff;
 
     &::before {
       content: url("../../images/icon-logo.png");
@@ -15,7 +15,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(-110%, -5%);
+      transform: translate(-100%, -5%);
     }
   }
 }
