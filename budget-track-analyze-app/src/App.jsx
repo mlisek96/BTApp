@@ -1,7 +1,9 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import { MantineProvider, Text } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
 import {Layout} from "./components/Layout";
 import {MainPage} from "./views/MainPage/index.jsx";
+import {HeroPage} from "./views/HeroPage/HeroPage.jsx";
+import {LogIn} from "./views/LogIn/LogIn.jsx";
 import './App.scss'
 
 function App() {
@@ -12,14 +14,14 @@ function App() {
         >
             <Router>
                 <Routes>
-                    <Route path='/welcome-page' />
-                    <Route path='/login' />
+                    <Route path='/hero-page' element={<HeroPage />} />
+                    <Route path='/login' element={<LogIn/>}/>
                     <Route path='/' element={<Layout />}>
                         <Route path='/' element={<MainPage />}/>
                         <Route path='/add-expense' />
-                        <Route path='/expenses-list' >
-                            <Route path='/expenses-list/total' />
-                            <Route path='/expenses-list/by-category' />
+                        <Route path='/expenses-table' >
+                            <Route path='/expenses-table/total' />
+                            <Route path='/expenses-table/by-category' />
                         </Route>
                     </Route>
                 </Routes>

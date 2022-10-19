@@ -1,16 +1,24 @@
+import {SimpleGrid, Group} from '@mantine/core';
+import {RingProgressTotal} from "../RingProgressTotal/RingProgressTotal.tsx";
+import {RingProgressByCategory} from "../RingProgressByCategory/RingProgressByCategory.tsx";
+
 import './Diagrams.scss'
 
 export function Diagrams() {
     return (
-        <div className="Diagrams">
-            <div>
-                <div className="Diagrams__first"></div>
-                <h3 className="Diagrams__name">Diagram 1</h3>
-            </div>
-            <div>
-                <div className="Diagrams__second"></div>
-                <h3 className="Diagrams__name">Diagram 2</h3>
-            </div>
-        </div>
+        <SimpleGrid className='Diagrams' cols={2} breakpoints={[{maxWidth: 'sm', cols: 1}]}>
+            <Group className='Diagrams__group'>
+                <RingProgressTotal data={
+                    [{
+                        label: "Page views",
+                        stats: "456,578",
+                        progress: '65',
+                        color: "teal",
+                    }]
+                }
+                />
+                <RingProgressByCategory />
+            </Group>
+        </SimpleGrid>
     )
 }

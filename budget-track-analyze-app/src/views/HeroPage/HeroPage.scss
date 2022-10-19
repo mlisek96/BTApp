@@ -1,0 +1,33 @@
+.HeroPage {
+  background-color: rgb(227, 222, 154);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  &-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+
+    &__button {
+      background-color: #2F9363;
+      font-weight: 500;
+      margin-bottom: 3rem;
+
+      &:hover {
+        background-color: rgba(47, 147, 99, 0.75);
+      }
+    }
+  }
+
+  &__img {
+    background-image: url("../../images/picture-background-2.png");
+    margin: 0 auto;
+    width: 25vw;
+    height: 50vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    //z-index: 2;
+  }
+}
