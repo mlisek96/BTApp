@@ -17,9 +17,9 @@ export function Menu() {
                 </NavLink>
             </li>
             <li>
-                <NavLink className="Menu__item" to="/expenses-list">
+                <NavLink className="Menu__item" to="/expenses-table">
                     <IconListDetails className='Menu__icon'/>
-                    Expenses List
+                    Expenses Table
                 </NavLink>
             </li>
         </ul>

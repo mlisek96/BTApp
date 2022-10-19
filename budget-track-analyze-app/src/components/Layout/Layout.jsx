@@ -1,15 +1,16 @@
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import {PageHeader} from "../PageHeader";
-import {PageFooter} from "../PageFooter";
+import {NavbarMinimal} from "../NavbarMinimal/NavbarMinimal.tsx";
 import './_Layout.scss'
 
 export function Layout() {
     return (
         <div className="Layout">
-            <PageHeader />
+            <NavbarMinimal/>
             <main className="Layout__main">
-                <Outlet />
+                <Outlet/>
             </main>
+            <PageHeader/>
         </div>
     )
 }
