@@ -4,6 +4,7 @@ import {Layout} from "./components/Layout";
 import {MainPage} from "./views/MainPage/index.jsx";
 import {HeroPage} from "./views/HeroPage/HeroPage.jsx";
 import {LogIn} from "./views/LogIn/LogIn.jsx";
+import {AddExpense} from "./views/AddExpense/AddExpense.jsx";
 import './App.scss'
 
 function App() {
@@ -14,11 +15,11 @@ function App() {
         >
             <Router>
                 <Routes>
-                    <Route path='/hero-page' element={<HeroPage />} />
-                    <Route path='/login' element={<LogIn/>}/>
+                    <Route path='/' element={<HeroPage />} />
+                    <Route path='/login' element={<LogIn />}/>
                     <Route path='/' element={<Layout />}>
-                        <Route path='/' element={<MainPage />}/>
-                        <Route path='/add-expense' />
+                        <Route path='/main-page' element={<MainPage />}/>
+                        <Route path='/add-expense' element={<AddExpense />}/>
                         <Route path='/expenses-table' >
                             <Route path='/expenses-table/total' />
                             <Route path='/expenses-table/by-category' />

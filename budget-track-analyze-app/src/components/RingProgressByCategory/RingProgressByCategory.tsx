@@ -51,7 +51,7 @@ interface StatsRingProps {
 export function RingProgressByCategory() {
     return (
         <div>
-            <Paper className='RingProgressByCategory' withBorder radius="md" p="xs">
+            <Paper className='RingProgressByCategory' withBorder shadow="md" radius="md" p="xs">
                 <Group>
                     <RingProgress
                         size={150}

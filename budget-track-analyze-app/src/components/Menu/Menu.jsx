@@ -11,7 +11,7 @@ export function Menu() {
                 <ButtonAddExpense />
             </li>
             <li>
-                <NavLink className="Menu__item" to="/">
+                <NavLink className="Menu__item" to="/main-page">
                     <IconHome className="Menu__icon"/>
                     Main Page
                 </NavLink>
