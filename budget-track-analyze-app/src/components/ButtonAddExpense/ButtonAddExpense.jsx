@@ -6,7 +6,16 @@ import './ButtonAddExpense.scss'
 export function ButtonAddExpense() {
     return (
         <div className='ButtonAddExpense' style={{width: 200}}>
-            <Button className='ButtonAddExpense__button' component={ Link } to="/add-expense" variant="light" fullWidth color="gray" radius="lg" size="xl" compact>
+            <Button
+                className='ButtonAddExpense__button'
+                component={ Link } to="/add-expense"
+                variant="light"
+                fullWidth
+                color="gray"
+                radius="xl"
+                size="xl"
+                compact
+            >
                 Add Expense
             </Button>
         </div>

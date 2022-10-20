@@ -77,7 +77,7 @@ export function NavbarMinimal() {
     return (
         <Navbar className='Navbar' width={{base: 80}} p="md">
             <Center>
-                <Link to='/'>
+                <Link to='/main-page'>
                     <IconReceipt2 className='Navbar__logo'/>
                 </Link>
             </Center>
@@ -86,7 +86,7 @@ export function NavbarMinimal() {
                     <Link to='/add-expense'>
                         {links[0]}
                     </Link>
-                    <Link to='/'>
+                    <Link to='/main-page'>
                         {links[1]}
                     </Link>
                     <Link to='/expenses-table'>
@@ -96,7 +96,9 @@ export function NavbarMinimal() {
             </Navbar.Section>
             <Navbar.Section>
                 <Stack justify="center" spacing={0}>
-                    <NavbarLink icon={IconLogout} label="Logout"/>
+                    <Link to='/'>
+                        <NavbarLink icon={IconLogout} label="Logout"/>
+                    </Link>
                 </Stack>
             </Navbar.Section>
         </Navbar>

@@ -7,7 +7,7 @@ export function CalendarMini() {
     const [value, setValue] = useState(null);
     return (
         <div>
-            <Paper withBorder radius="md" p="xs" className='CalendarMini'>
+            <Paper withBorder shadow="md" radius="md" p="xs" className='CalendarMini'>
                 <Text color="dimmed" size="xs" transform="uppercase" weight={700} align='center'>
                     Calendar
                 </Text>

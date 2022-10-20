@@ -70,7 +70,7 @@ export function HeroPage() {
                 <div className={classes.inner}>
                     <div className={classes.content}>
                         <Title className={classes.title}>
-                            Welcome in <span className={classes.highlight}>BTApp</span>-<br /> working name: BudgetTrackAnalyze App
+                            Welcome in <span className={classes.highlight}>BTApp</span>-<br /> BudgetTrackAnalyze App
                         </Title>
                         <Text color="dimmed" mt="md">
                             web app that allows you to <span className={classes.highlight}>track</span> and <span className={classes.highlight}>analyze</span> your monthly home <span className={classes.highlight}>budget</span>

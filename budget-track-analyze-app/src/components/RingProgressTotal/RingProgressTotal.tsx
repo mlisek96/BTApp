@@ -13,7 +13,7 @@ interface StatsRingProps {
 export function RingProgressTotal({data}: StatsRingProps) {
     const stats = data.map((stat) => {
         return (
-            <Paper className='RingProgressTotal' withBorder radius="md" p="xs" key={stat.label}>
+            <Paper className='RingProgressTotal' withBorder shadow="md" radius="md" p="xs" key={stat.label}>
                 <Group>
                     <RingProgress
                         size={150}

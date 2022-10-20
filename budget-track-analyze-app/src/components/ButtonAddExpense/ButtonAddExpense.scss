@@ -4,16 +4,15 @@
 
   &__button{
     font-size: 1rem;
-    font-weight: normal;
-    color: #041E24;
-    background-color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    color: #196159;
+    //background-color: rgba(255, 255, 255, 0.75);
+    background-color: #e3de9a;
     box-shadow: 2px 2px 20px 5px rgba(161, 161, 148, 0.25);
 
-  }
+    &:hover {
+      background-color: rgba(227, 222, 154, 0.75);
+    }
 
-  &__icon {
-    height: 1.25rem;
-    //font-size: 0.75rem;
-    color: rgba(4, 30, 36, 0.75);
   }
 }

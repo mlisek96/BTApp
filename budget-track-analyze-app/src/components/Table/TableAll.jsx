@@ -6,7 +6,7 @@ import './TableAll.scss'
 export function TableAll() {
     return (
         <div className="Table">
-            <Paper classNames='Table__paper' withBorder radius="md" p="md" className='CalendarMini'>
+            <Paper withBorder shadow="md" radius="md" p="md" classNames='Table__paper'>
                 <Text color="dimmed" size="xs" transform="uppercase" weight={700} align='center'>
                     Table
                 </Text>

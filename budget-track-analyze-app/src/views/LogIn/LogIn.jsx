@@ -12,7 +12,7 @@ import './LogIn.scss'
 export function LogIn() {
     return (
         <div className='LogIn'>
-            <Container size={420} mt={96} my={13}>
+            <Container size={420} mt={96} my={12}>
                 <Title
                     align="center"
                     sx={(theme) => ({ fontFamily: `Poppins, ${theme.fontFamily}`, fontWeight: 900 })}
@@ -27,7 +27,7 @@ export function LogIn() {
                         Give us your name and we will organize our application for you :)
                     </Text>
                     <TextInput label="Name" placeholder="Enter your name here" required />
-                    <Button className='LogIn__button' component={Link} to='/' fullWidth mt="xl">
+                    <Button className='LogIn__button' component={Link} to='/main-page' fullWidth mt="xl">
                         Sign in
                     </Button>
                 </Paper>
