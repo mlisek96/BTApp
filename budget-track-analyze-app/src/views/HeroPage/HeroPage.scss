@@ -13,7 +13,7 @@
     &__button {
       background-color: #2F9363;
       font-weight: 500;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
 
       &:hover {
         background-color: rgba(47, 147, 99, 0.75);
@@ -24,9 +24,9 @@
   &__img {
     background-image: url("../../images/picture-background-2.png");
     margin: 0 auto;
-    margin-top: 3.25rem;
+    //margin-top: 3.25rem;
     width: 25vw;
-    height: 50vh;
+    height: 40vh;
     background-size: contain;
     background-repeat: no-repeat;
     //z-index: 2;

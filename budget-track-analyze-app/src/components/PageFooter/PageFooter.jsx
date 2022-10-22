@@ -12,7 +12,7 @@ export function PageFooter() {
                 </a>
             </div>
             <div className='PageFooter__text'>
-                Images made by Freepik & TablerIcons
+                Images made by Freepik & TablerIcons <br/>& Flaticon
             </div>
         </footer>
     )
