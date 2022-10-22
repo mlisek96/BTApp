@@ -1,5 +1,5 @@
-import {TableTotal} from "../TableTotal/TableTotal.jsx";
-import {TableCategory} from "../TableCategory/TableCategory.jsx";
+import {TableTotal} from "../TableMiniTotal/TableTotal.jsx";
+import {TableCategory} from "../TableMIniCategory/TableCategory.jsx";
 import {Text, Paper} from "@mantine/core";
 import './TableAll.scss'
 
@@ -11,7 +11,7 @@ export function TableAll() {
                     Table
                 </Text>
                 <TableTotal/>
-                {/*<TableCategory />*/}
+                {/*<TableMIniCategory />*/}
             </Paper>
         </div>
     )

@@ -7,11 +7,12 @@
 
   &__img {
     background-image: url("../../images/picture-background-2.png");
-    margin: 0 auto;
+    margin: 0 auto 2px;
     max-width: 25vw;
-    height: 50vh;
+    height: 40vh;
     background-size: contain;
     background-repeat: no-repeat;
+
   }
 
   &__button {

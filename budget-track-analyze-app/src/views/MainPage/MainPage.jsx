@@ -1,6 +1,6 @@
 import {SimpleGrid} from '@mantine/core';
 import {Diagrams} from "../../components/Diagrams/index.jsx";
-import {TableAll} from "../../components/Table/TableAll.jsx";
+import {TableAll} from "../../components/TableMini/TableAll.jsx";
 import {CalendarMini} from "../../components/CalendarMini/CalendarMini.jsx";
 import "./MainPage.scss"
 

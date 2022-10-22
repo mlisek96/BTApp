@@ -1,0 +1,19 @@
+.TableLifeTable {
+
+  &-thead {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    transition: box-shadow 150ms ease;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-bottom: 1px solid #E9ECEF;
+    }
+  }
+}

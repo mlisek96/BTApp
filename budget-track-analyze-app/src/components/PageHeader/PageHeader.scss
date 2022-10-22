@@ -6,4 +6,8 @@
   align-items: stretch;
   padding: 1rem 1rem;
   overflow: hidden;
+  top: 0;
+  position: sticky;
+  max-height: 100vh;
+  max-width: 20rem;
 }

@@ -1,13 +1,7 @@
 import {Link} from "react-router-dom";
-import {
-    createStyles,
-    Container,
-    Title,
-    Button,
-    Group,
-    Text,
-} from '@mantine/core';
+import {createStyles, Container, Title, Button, Group, Text,} from '@mantine/core';
 import './HeroPage.scss'
+import {PageFooterBeforeMainPage} from "../../components/PageFooterBeforeMainPage/PageFooterBeforeMainPage";
 
 const useStyles = createStyles((theme) => ({
     inner: {
@@ -75,13 +69,14 @@ export function HeroPage() {
                         <Text color="dimmed" mt="md">
                             web app that allows you to <span className={classes.highlight}>track</span> and <span className={classes.highlight}>analyze</span> your monthly home <span className={classes.highlight}>budget</span>
                         </Text>
-                        <Group mt={30} className='HeroPage-group'>
+                        <Group className='HeroPage-group'>
                             <Button component={Link} to='/login' radius="xl" size="lg" className='HeroPage-group__button'>
                                 Get started
                             </Button>
                         </Group>
                     </div>
                     <div className='HeroPage__img'></div>
+                    <PageFooterBeforeMainPage />
                 </div>
             </Container>
         </div>

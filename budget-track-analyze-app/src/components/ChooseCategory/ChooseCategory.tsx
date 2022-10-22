@@ -91,7 +91,6 @@ export function ChooseCategory() {
             placeholder="Pick one"
             itemComponent={SelectItem}
             data={data}
-            searchable
             maxDropdownHeight={400}
             nothingFound="Nobody here"
             filter={(value, item) =>
