@@ -1,17 +1,17 @@
 import {TableTotal} from "../TableMiniTotal/TableTotal.jsx";
-import {TableCategory} from "../TableMIniCategory/TableCategory.jsx";
 import {Text, Paper} from "@mantine/core";
-import './TableAll.scss'
+import './TableMini.scss'
+import {TableExpensesTotal} from "../TableExpensesTotal/TableExpensesTotal";
 
-export function TableAll() {
+export function TableMini() {
     return (
-        <div className="Table">
-            <Paper withBorder shadow="md" radius="md" p="md" classNames='Table__paper'>
+        <div className="TableMini">
+            <Paper withBorder shadow="md" radius="md" p="md" classNames='TableMini-paper'>
                 <Text color="dimmed" size="xs" transform="uppercase" weight={700} align='center'>
                     Table
                 </Text>
                 <TableTotal/>
-                {/*<TableMIniCategory />*/}
+                {/*<TableExpensesTotal />*/}
             </Paper>
         </div>
     )

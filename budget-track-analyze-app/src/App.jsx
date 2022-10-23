@@ -7,7 +7,7 @@ import {LogIn} from "./views/LogIn/LogIn.jsx";
 import {AddExpense} from "./views/AddExpense/AddExpense.jsx";
 import {ExpensesTable} from "./views/ExpensesTable/ExpensesTable.jsx";
 import {ExpensesTableCategory} from "./views/ExpensesTableCategory/ExpensesTableCategory";
-import {NotFound} from "./views/404Page/404Page";
+import {NotFoundPage} from "./views/404Page/404Page";
 import './App.scss'
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
                         <Route path='/expenses-table' element={<ExpensesTable/>}/>
                         <Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
                     </Route>
-                    <Route path='*' element={<NotFound />}/>
+                    <Route path='*' element={<NotFoundPage />}/>
                 </Routes>
             </Router>
         </MantineProvider>

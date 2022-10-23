@@ -11,7 +11,7 @@ export function CalendarMini() {
                 <Text color="dimmed" size="xs" transform="uppercase" weight={700} align='center'>
                     Calendar
                 </Text>
-                <Calendar value={value} onChange={setValue} className='CalendarMini__main'/>
+                <Calendar value={value} onChange={setValue} allowLevelChange={false} className='CalendarMini__main'/>
             </Paper>
         </div>
     )

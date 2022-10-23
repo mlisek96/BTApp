@@ -1,6 +1,6 @@
 import {SimpleGrid} from '@mantine/core';
 import {Diagrams} from "../../components/Diagrams/index.jsx";
-import {TableAll} from "../../components/TableMini/TableAll.jsx";
+import {TableMini} from "../../components/TableMini/TableMini.jsx";
 import {CalendarMini} from "../../components/CalendarMini/CalendarMini.jsx";
 import "./MainPage.scss"
 
@@ -11,7 +11,7 @@ export function MainPage() {
             <p className="MainPage__paragraph">Let's check your expenses</p>
             <Diagrams/>
             <SimpleGrid className='MainPage-grid' cols={2} breakpoints={[{maxWidth: 'sm', cols: 1}]}>
-                <TableAll/>
+                <TableMini/>
                 <CalendarMini/>
             </SimpleGrid>
         </div>
