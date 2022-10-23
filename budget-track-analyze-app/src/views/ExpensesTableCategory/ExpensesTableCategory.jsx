@@ -10,6 +10,8 @@ import {TableLife} from "../../components/TableLIfe/TableLife";
 import {TableTransportation} from "../../components/TableTransportation/TableTransportation";
 import {TableUtilities} from "../../components/TableUtilities/TableUtilities";
 import {TableHoliday} from "../../components/TableHoliday/TableHoliday";
+import {ButtonArrowLeft} from "../../components/ButtonArrowLeft/ButtonArrowLeft";
+import {ButtonArrowRight} from "../../components/ButtonArrowRight/ButtonArrowRight";
 
 
 export function ExpensesTableCategory() {
@@ -22,6 +24,8 @@ export function ExpensesTableCategory() {
                     <Group position='left'>
                         <ButtonTotal/>
                         <ButtonByCategory/>
+                        <ButtonArrowLeft />
+                        <ButtonArrowRight />
                     </Group>
                 </Paper>
                 <TableEntertainment/>

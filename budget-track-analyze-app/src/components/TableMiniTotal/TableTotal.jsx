@@ -1,6 +1,7 @@
-import {ActionIcon, ScrollArea, Table} from '@mantine/core';
+import {ActionIcon, ScrollArea, Table, createStyles} from '@mantine/core';
 import { IconX } from '@tabler/icons';
 import './TableTotal.scss'
+import {useState} from "react";
 
 const expenses = [
     { id: 1, iconCategory: 'home', amount: 123, description: 'biedronka zakupy' },
@@ -13,7 +14,16 @@ const expenses = [
     { id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy' },
 ]
 
+const useStyles = createStyles((theme) => ({
+    scrolled: {
+        boxShadow: theme.shadows.sm,
+    },
+}));
+
 export function TableTotal() {
+    const {classes, cx} = useStyles();
+    const [scrolled, setScrolled] = useState(false);
+
     const rows = expenses.map((expense) => (
         <tr key={expense.id}>
             <td>{expense.iconCategory}</td>
@@ -24,9 +34,9 @@ export function TableTotal() {
     ));
 
     return (
-        <ScrollArea style={{ height: 300 }}>
+        <ScrollArea style={{ height: 300 }} onScrollPositionChange={({y}) => setScrolled(y !== 0)}>
             <Table className='TableTotal'>
-                <thead>
+                <thead className={cx('TableTotal-thead', {[classes.scrolled]: scrolled})}>
                 <tr>
                     <th>Category</th>
                     <th>Amount</th>

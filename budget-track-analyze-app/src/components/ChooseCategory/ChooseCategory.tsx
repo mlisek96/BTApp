@@ -93,6 +93,7 @@ export function ChooseCategory() {
             data={data}
             maxDropdownHeight={400}
             nothingFound="Nobody here"
+            clearable
             filter={(value, item) =>
                 item.label.toLowerCase().includes(value.toLowerCase().trim()) ||
                 item.description.toLowerCase().includes(value.toLowerCase().trim())

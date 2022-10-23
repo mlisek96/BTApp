@@ -12,7 +12,7 @@ export function PageFooterBeforeMainPage() {
                 </a>
             </div>
             <div className='PageFooterBeforeMainPage__text'>
-                Images made by Freepik & TablerIcons & Flaticon
+                Image made by pikisuperstar from Freepik
             </div>
         </footer>
     )

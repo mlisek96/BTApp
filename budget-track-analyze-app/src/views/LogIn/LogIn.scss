@@ -4,23 +4,41 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  &__img {
-    background-image: url("../../images/picture-background-2.png");
-    margin: 0 auto 2px;
-    max-width: 25vw;
-    height: 40vh;
-    background-size: contain;
-    background-repeat: no-repeat;
+  &-container {
+    padding-top: 3.85rem;
 
-  }
+    &__title {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
 
-  &__button {
-    background-color: #2F9363;
-    font-weight: 500;
+    &__text {
+      color: #868E96;
+      text-align: center;
+      margin-top: 0.3125rem;
+      font-size: 0.875rem;
+    }
 
-    &:hover {
-      background-color: rgba(47, 147, 99, 0.75);
+    &__content {
+      width: 26.25rem;
+
+      &-btn {
+        background-color: #2F9363;
+        font-weight: 500;
+
+        &:hover {
+          background-color: rgba(47, 147, 99, 0.75);
+        }
+      }
+    }
+
+    &__img {
+      margin: 0 auto;
+      max-width: 25vw;
     }
   }
 }

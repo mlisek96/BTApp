@@ -3,6 +3,8 @@ import './ExpensesTable.scss'
 import {TableExpensesTotal} from "../../components/TableExpensesTotal/TableExpensesTotal.jsx";
 import {ButtonTotal} from "../../components/ButtonTotal/ButtonTotal";
 import {ButtonByCategory} from "../../components/ButtonByCategory/ButtonByCategory";
+import {ButtonArrowRight} from "../../components/ButtonArrowRight/ButtonArrowRight";
+import {ButtonArrowLeft} from "../../components/ButtonArrowLeft/ButtonArrowLeft";
 
 
 export function ExpensesTable() {
@@ -16,6 +18,8 @@ export function ExpensesTable() {
                        <Group position='left' mb='md' >
                            <ButtonTotal />
                            <ButtonByCategory />
+                           <ButtonArrowLeft />
+                           <ButtonArrowRight />
                        </Group>
                        <TableExpensesTotal />
                    </Paper>

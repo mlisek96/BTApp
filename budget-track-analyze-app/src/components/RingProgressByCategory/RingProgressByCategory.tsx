@@ -57,18 +57,19 @@ export function RingProgressByCategory() {
                         size={150}
                         roundCaps
                         thickness={15}
-                        label={
-                            <Text size="xs" align="center" px="xs" sx={{pointerEvents: 'none'}}>
-                                Hover sections to see tooltips
-                            </Text>
-                        }
+                        // label={
+                        //     <Text size="xs" align="center" px="xs" sx={{pointerEvents: 'none'}}>
+                        //         Hover sections to see tooltips
+                        //     </Text>
+                        // }
                         sections={[
-                            {value: 40, color: 'cyan', tooltip: 'Documents – 40 Gb'},
-                            {value: 25, color: 'orange', tooltip: 'Apps – 25 Gb'},
-                            {value: 15, color: 'grape', tooltip: 'Other – 15 Gb'},
-                            {value: 15, color: 'blue', tooltip: 'Other – 18 Gb'},
+                            {value: 10, color: 'cyan', tooltip: 'Documents – 40 Gb'},
+                            {value: 10, color: 'orange', tooltip: 'Apps – 25 Gb'},
+                            {value: 10, color: 'grape', tooltip: 'Other – 15 Gb'},
+                            {value: 10, color: 'blue', tooltip: 'Other – 18 Gb'},
                             {value: 15, color: 'yellow', tooltip: 'Other – 98 Gb'},
                             {value: 15, color: 'red', tooltip: 'Other – 10 Gb'},
+                            {value: 15, color: 'pink', tooltip: 'Other – 10 Gb'},
                         ]}
                     />
 
@@ -76,9 +77,9 @@ export function RingProgressByCategory() {
                         <Text color="dimmed" size="xs" transform="uppercase" weight={700}>
                             Expenses by Category
                         </Text>
-                        <Text weight={700} size="xl">
-                            100.000
-                        </Text>
+                        {/*<Text weight={700} size="xl">*/}
+                        {/*    100.000*/}
+                        {/*</Text>*/}
                     </div>
                 </Group>
             </Paper>
