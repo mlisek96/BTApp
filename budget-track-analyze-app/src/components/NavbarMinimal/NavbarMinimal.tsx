@@ -74,6 +74,9 @@ export function NavbarMinimal() {
         />
     ));
 
+    // function handleReset() {
+    // }
+
     return (
         <Navbar className='Navbar' width={{base: 80}} p="md">
             <Center>
