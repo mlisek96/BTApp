@@ -1,17 +1,3 @@
-import {useState} from 'react';
-import {DatePicker} from '@mantine/dates';
-
-// export function DataPicker() {
-//     const [value, onChange] = useState(new Date());
-//     return (
-//         <DatePicker
-//             label='Choose date'
-//             allowLevelChange={false}
-//             value={value}
-//             onChange={onChange}
-//         />);
-// }
-
 import { Select } from '@mantine/core';
 import './DataPicker.scss'
 
@@ -19,6 +5,7 @@ export function DataPicker() {
     return (
         <Select
             className='DataPicker'
+            name='month'
             label="Choose month"
             placeholder="Pick one"
             data={[
