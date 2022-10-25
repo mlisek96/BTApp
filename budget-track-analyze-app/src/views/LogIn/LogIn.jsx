@@ -4,8 +4,6 @@ import './LogIn.scss'
 import {PageFooterBeforeMainPage} from "../../components/PageFooterBeforeMainPage/PageFooterBeforeMainPage";
 import image from '../../images/picture-background-2.png'
 
-const inputName = document.getElementById('inputName');
-
 const validateFunction = name => {
     if (!name) {
         return 'Entering name is required'
@@ -30,11 +28,11 @@ export function LogIn() {
 
         if(errorMsg) {
             setErrorMsg(errorMsg)
-            console.log('błąd - name')
+            // console.log('błąd - name')
             return
         }
 
-        console.log('submitted', name)
+        // console.log('submitted', name)
         localStorage.setItem('valueNameTaken', name);
         location.href = '/main-page';
     }
@@ -55,10 +53,13 @@ export function LogIn() {
                     <Text color="dimmed" size="sm" align="center" mt={5}>
                         Give us your name and we will organize our application for you :)
                     </Text>
-
-                    {errorMsg && (<span className='LogIn-container__content-errorMsg'>{errorMsg}</span>)}
-
-                    <TextInput id='inputName' onChange={handleChange} label="Name" placeholder="Enter your name here" required/>
+                    <TextInput
+                        onChange={handleChange}
+                        error={errorMsg}
+                        label="Name"
+                        placeholder="Enter your name here"
+                        required
+                    />
                     <Button
                         onClick={handleClick}
                         className='LogIn-container__content-btn'

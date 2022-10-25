@@ -2,6 +2,7 @@ import { forwardRef } from 'react';
 import { Group, Avatar, Text, Select } from '@mantine/core';
 import './ChooseCategory.scss'
 
+
 const data = [
     {
         image: '../src/images/icon-entertainment.png',
@@ -84,8 +85,23 @@ const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
 );
 
 export function ChooseCategory() {
+
+    // const handleChangeCategory = (event) => {
+    //     const {name, value} = event.target
+    // }
+    //     setForm(prevForm => {
+    //         return {
+    //             ...prevForm,
+    //             [name]: value
+    //         };
+    //     });
+
     return (
         <Select
+            // onChange={handleChangeCategory}
+            // value={form.category}
+            // error={errorMsg?.category}
+            name='category'
             className='ChooseCategory'
             label="Choose category"
             placeholder="Pick one"
