@@ -1,7 +1,7 @@
-import {createStyles, Group, Paper, TextInput, Button} from "@mantine/core";
+import {createStyles, Group, Paper, TextInput} from "@mantine/core";
 import {ChooseCategory} from "../ChooseCategory/ChooseCategory";
 import {DataPicker} from "../DataPicker/DataPicker";
-import {ButtonSubmit} from "../ButtonSubmit/ButtonSubmit";
+import {ButtonSubmit} from "../ButtonSubmit/ButtonSubmit.jsx";
 import {ButtonClose} from "../ButtonClose/ButtonClose";
 import {IconCurrencyZloty} from '@tabler/icons';
 import {useState} from "react";
@@ -21,13 +21,13 @@ const validateFunction = (form) => {
         errorMsg.description = 'Entering short description is required'
     }
 
-    if (!form.category) {
-        errorMsg.category = 'Picking a category is required'
-    }
-
-    if (!form.month) {
-        errorMsg.month = 'Picking a month is required'
-    }
+    // if (!form.category) {
+    //     errorMsg.category = 'Picking a category is required'
+    // }
+    //
+    // if (!form.month) {
+    //     errorMsg.month = 'Picking a month is required'
+    // }
 
     return Object.keys(errorMsg).length > 0 ? errorMsg : null;
 };
@@ -54,8 +54,8 @@ export function AddExpenseForm() {
     const [form, setForm] = useState({
         amount: '',
         description: '',
-        category: '',
-        month: '',
+        // category: '',
+        // month: '',
     })
 
     const handleChangeAmount = (event) => {
@@ -78,32 +78,33 @@ export function AddExpenseForm() {
         });
     }
 
-    const handleChangeCategory = () => {
-        // const {name, value} = event.target
-        // setForm(prevForm => {
-        //     return {
-        //         ...prevForm,
-        //         [name]: value
-        //     }
-        // })
+    // const handleChangeCategory = () => {
+    //     // const {name, value} = event.target
+    //     // setForm(prevForm => {
+    //     //     return {
+    //     //         ...prevForm,
+    //     //         [name]: value
+    //     //     }
+    //     // })
+    //
+    //     setForm({
+    //         category: value
+    //     })
+    // }
 
-        setForm({
-            category: value
-        })
-    }
-
-    const handleChangeMonth = (event) => {
-        // const {name, value} = event.target
-        // setForm(prevForm => {
-        //     return {
-        //         ...prevForm,
-        //         [name]: value
-        //     };
-        // });
-        setForm({
-            month: event.target.value
-        })
-    }
+    // const handleChangeMonth = (event) => {
+    //     // const {name, searchValue} = event.target
+    //     // setForm(prevForm => {
+    //     //     return {
+    //     //         ...prevForm,
+    //     //         [name]: searchValue
+    //     //     };
+    //     // });
+    //
+    //     setForm({
+    //         month: event.change.values
+    //     })
+    // }
 
     function handleClick(event) {
         event.preventDefault();
@@ -118,8 +119,8 @@ export function AddExpenseForm() {
         setForm({
             amount: '',
             description: '',
-            category: '',
-            month: '',
+            // category: '',
+            // month: '',
         })
         const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
 
@@ -127,15 +128,15 @@ export function AddExpenseForm() {
             setForm({
                 amount: arrayOfExpenses.amount,
                 description:arrayOfExpenses.description,
-                category: arrayOfExpenses.category,
-                month: arrayOfExpenses.month,
+                // category: arrayOfExpenses.category,
+                // month: arrayOfExpenses.month,
             })
         } else {
             setForm({
                 amount: '',
                 description: '',
-                category: '',
-                month: '',
+                // category: '',
+                // month: '',
             })
         }
         arrayOfExpenses.push(form)
@@ -176,18 +177,21 @@ export function AddExpenseForm() {
                     classNames={{input: classes.input, label: classes.inputLabel}}
                 />
                 <ChooseCategory
-                    error={errorMsg?.category}
-                    // value={form.category}
-                    onChange={handleChangeCategory}
-                    // name='category'
+                    // error={errorMsg?.category}
+                    // // value={form.category}
+                    // onChange={handleChangeCategory}
+                    // // name='category'
                 />
                 <DataPicker
-                    error={errorMsg?.month}
+                    // error={errorMsg?.month}
                     // // value={form.month}
-                    onChange={handleChangeMonth}
+                    // searchValue={form.month}
+                    // onChange={handleChangeMonth}
                 />
                 <Group position="right" mt="lg">
-                    <ButtonSubmit onClick={handleClick}/>
+                    <ButtonSubmit
+                        onClick={handleClick}
+                    />
                     <ButtonClose/>
                 </Group>
             </div>
