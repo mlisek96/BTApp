@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {Link} from "react-router-dom";
-import {Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, ActionIcon} from '@mantine/core';
+import {Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack} from '@mantine/core';
 import {
     TablerIcon,
     IconHome2,
@@ -59,11 +59,12 @@ const mockdata = [
     {icon: IconHome2, label: 'Main Page'},
     {icon: IconListDetails, label: 'Expenses Table'},
     // { icon: IconCalendarStats, label: 'CalendarMini' },
-    // {icon: IconLogout, label: 'Logout'},
+    {icon: IconLogout, label: 'Logout'},
 ];
 
 export function NavbarMinimal() {
     const [active, setActive] = useState(2);
+    const [logIn, setLogIn] = useState(true)
 
     const links = mockdata.map((link, index) => (
         <NavbarLink
@@ -74,8 +75,16 @@ export function NavbarMinimal() {
         />
     ));
 
-    // function handleReset() {
-    // }
+    function handleClick(event) {
+        event.preventDefault()
+
+        if(logIn) {
+            setLogIn(logIn)
+            setLogIn(false);
+            localStorage.clear();
+            location.href = '/';
+        }
+    }
 
     return (
         <Navbar className='Navbar' width={{base: 80}} p="md">
@@ -99,8 +108,8 @@ export function NavbarMinimal() {
             </Navbar.Section>
             <Navbar.Section>
                 <Stack justify="center" spacing={0}>
-                    <Link to='/'>
-                        <NavbarLink icon={IconLogout} label="Logout"/>
+                    <Link to='/' onClick={handleClick}>
+                        {links[3]}
                     </Link>
                 </Stack>
             </Navbar.Section>

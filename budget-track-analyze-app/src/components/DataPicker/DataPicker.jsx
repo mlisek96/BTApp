@@ -1,10 +1,13 @@
 import { Select } from '@mantine/core';
 import './DataPicker.scss'
 
-export function DataPicker() {
+export function DataPicker({error, onChange}) {
     return (
         <Select
             className='DataPicker'
+            // value={value}
+            error={error}
+            onChange={onChange}
             name='month'
             label="Choose month"
             placeholder="Pick one"
