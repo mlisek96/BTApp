@@ -1,5 +1,5 @@
 import {Button} from "@mantine/core";
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 import './ButtonSubmit.scss'
 
 export function ButtonSubmit({onClick}) {
@@ -7,7 +7,7 @@ export function ButtonSubmit({onClick}) {
         <Button
             onClick={onClick}
             className='ButtonSubmit'
-            component={Link} to='/expenses-table'
+            // component={Link} to='/expenses-table'
             radius="xl" size="sm"
         >
             Submit

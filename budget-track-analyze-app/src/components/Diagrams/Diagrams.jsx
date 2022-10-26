@@ -14,16 +14,16 @@ export function Diagrams() {
         description: '',
     })
     useEffect(() => {
-        const storageArrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense'))
-        if (storageArrayOfExpenses !== null) {
-            setForm({
-                amount: storageArrayOfExpenses.amount,
-                description: storageArrayOfExpenses.description,
-            })
-        }
+        // const storageArrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense'))
+        // if (storageArrayOfExpenses !== null) {
+        //     setForm({
+        //         amount: storageArrayOfExpenses.amount,
+        //         description: storageArrayOfExpenses.description,
+        //     })
+        // }
 
-        // const storageArrayOfExpenses = localStorage.getItem('oneMonthExpense')
-        // if ( storageArrayOfExpenses !== null) setForm(JSON.parse(storageArrayOfExpenses))
+        const storageArrayOfExpenses = localStorage.getItem('oneMonthExpense')
+        if ( storageArrayOfExpenses !== null) setForm(JSON.parse(storageArrayOfExpenses))
     },[])
     console.log(form)
 

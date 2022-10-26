@@ -85,8 +85,9 @@ const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
     )
 );
 
-export function ChooseCategory({error, onChange}) {
-    // const [value, setValue] = useState('')
+// export function ChooseCategory({error, onChange}) {
+export function ChooseCategory() {
+    // const [value, setValue] = useState({value :''})
     //
     // const handleChangeCategory = (event) => {
     //     setValue({value: event.target.value})
@@ -94,9 +95,9 @@ export function ChooseCategory({error, onChange}) {
 
     return (
         <Select
-            onChange={onChange}
+            // onChange={onChange}
             // value={value}
-            error={error}
+            // error={error}
             name='category'
             className='ChooseCategory'
             label="Choose category"
