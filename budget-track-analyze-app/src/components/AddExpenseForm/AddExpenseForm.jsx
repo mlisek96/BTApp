@@ -1,11 +1,11 @@
 import {createStyles, Group, Paper, TextInput, Button} from "@mantine/core";
 import {ChooseCategory} from "../ChooseCategory/ChooseCategory";
 import {DataPicker} from "../DataPicker/DataPicker";
-// import {ButtonSubmit} from "../ButtonSubmit/ButtonSubmit";
+import {ButtonSubmit} from "../ButtonSubmit/ButtonSubmit";
 import {ButtonClose} from "../ButtonClose/ButtonClose";
 import {IconCurrencyZloty} from '@tabler/icons';
 import {useState} from "react";
-import {Link} from "react-router-dom";
+
 
 const validateFunction = (form) => {
     const errorMsg = {}
@@ -23,6 +23,10 @@ const validateFunction = (form) => {
 
     if (!form.category) {
         errorMsg.category = 'Picking a category is required'
+    }
+
+    if (!form.month) {
+        errorMsg.month = 'Picking a month is required'
     }
 
     return Object.keys(errorMsg).length > 0 ? errorMsg : null;
@@ -51,7 +55,7 @@ export function AddExpenseForm() {
         amount: '',
         description: '',
         category: '',
-        // month: '',
+        month: '',
     })
 
     const handleChangeAmount = (event) => {
@@ -74,13 +78,30 @@ export function AddExpenseForm() {
         });
     }
 
-    const handleChangeCategory = (event) => {
-        const {name, value} = event.target
-        setForm(prevForm => {
-            return {
-                ...prevForm,
-                [name]: value
-            }
+    const handleChangeCategory = () => {
+        // const {name, value} = event.target
+        // setForm(prevForm => {
+        //     return {
+        //         ...prevForm,
+        //         [name]: value
+        //     }
+        // })
+
+        setForm({
+            category: value
+        })
+    }
+
+    const handleChangeMonth = (event) => {
+        // const {name, value} = event.target
+        // setForm(prevForm => {
+        //     return {
+        //         ...prevForm,
+        //         [name]: value
+        //     };
+        // });
+        setForm({
+            month: event.target.value
         })
     }
 
@@ -98,27 +119,30 @@ export function AddExpenseForm() {
             amount: '',
             description: '',
             category: '',
-            // month: '',
+            month: '',
         })
-        const storageArrayOfExpenses = JSON.parse(localStorage.getItem('singleExpense')) ?? [];
+        const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
 
-        if (localStorage.getItem('singleExpense')) {
+        if (localStorage.getItem('oneMonthExpense')) {
             setForm({
-                amount: storageArrayOfExpenses.amount,
-                description: storageArrayOfExpenses.description,
-                // category: storageArrayOfExpenses.category,
-                // month: storageArrayOfExpenses.month,
+                amount: arrayOfExpenses.amount,
+                description:arrayOfExpenses.description,
+                category: arrayOfExpenses.category,
+                month: arrayOfExpenses.month,
             })
         } else {
             setForm({
                 amount: '',
                 description: '',
-                // category: '',
-                // month: '',
+                category: '',
+                month: '',
             })
         }
-        storageArrayOfExpenses.push(form)
-        localStorage.setItem('singleExpense', JSON.stringify(storageArrayOfExpenses))
+        arrayOfExpenses.push(form)
+        localStorage.setItem('oneMonthExpense', JSON.stringify(arrayOfExpenses))
+        const  storageArrayOfExpenses = JSON.parse(localStorage.oneMonthExpense)
+        console.log(storageArrayOfExpenses)
+        // location.href = '/expenses-table'
 
     }
 
@@ -151,18 +175,19 @@ export function AddExpenseForm() {
                     mt="md"
                     classNames={{input: classes.input, label: classes.inputLabel}}
                 />
-                <ChooseCategory />
-                <DataPicker/>
+                <ChooseCategory
+                    error={errorMsg?.category}
+                    // value={form.category}
+                    onChange={handleChangeCategory}
+                    // name='category'
+                />
+                <DataPicker
+                    error={errorMsg?.month}
+                    // // value={form.month}
+                    onChange={handleChangeMonth}
+                />
                 <Group position="right" mt="lg">
-                    {/*<ButtonSubmit onClick={handleClick}/>*/}
-                    <Button
-                        onClick={handleClick}
-                        className='ButtonSubmit'
-                        component={Link} to='/expenses-table'
-                        radius="xl" size="sm"
-                    >
-                        Submit
-                    </Button>
+                    <ButtonSubmit onClick={handleClick}/>
                     <ButtonClose/>
                 </Group>
             </div>

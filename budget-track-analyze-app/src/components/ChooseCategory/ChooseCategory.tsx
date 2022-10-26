@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import {forwardRef, useState} from 'react';
 import { Group, Avatar, Text, Select } from '@mantine/core';
 import './ChooseCategory.scss'
 
@@ -65,6 +65,7 @@ interface ItemProps extends React.ComponentPropsWithoutRef<'div'> {
     image: string;
     label: string;
     description: string;
+    value: string;
 }
 
 const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
@@ -84,23 +85,18 @@ const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
     )
 );
 
-export function ChooseCategory() {
-
+export function ChooseCategory({error, onChange}) {
+    // const [value, setValue] = useState('')
+    //
     // const handleChangeCategory = (event) => {
-    //     const {name, value} = event.target
+    //     setValue({value: event.target.value})
     // }
-    //     setForm(prevForm => {
-    //         return {
-    //             ...prevForm,
-    //             [name]: value
-    //         };
-    //     });
 
     return (
         <Select
-            // onChange={handleChangeCategory}
-            // value={form.category}
-            // error={errorMsg?.category}
+            onChange={onChange}
+            // value={value}
+            error={error}
             name='category'
             className='ChooseCategory'
             label="Choose category"
