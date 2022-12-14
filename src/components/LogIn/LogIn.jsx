@@ -1,8 +1,9 @@
 import {useState} from "react";
-import {TextInput, Paper, Title, Text, Container, Button, Image} from '@mantine/core';
-import './LogIn.scss'
-import {PageFooterBeforeMainPage} from "../../components/PageFooterBeforeMainPage/PageFooterBeforeMainPage";
-import image from '../../images/picture-background-2.png'
+import {PageFooterBeforeMainPage} from "../PageFooterBeforeMainPage/PageFooterBeforeMainPage.jsx";
+import {LogInContainer} from "../LogInContainer/LogInContainer";
+import {Button, Container, Image, Paper, Text, TextInput, Title} from "@mantine/core";
+import image from "../../images/picture-background-2.png";
+import './LogIn.scss';
 
 const validateFunction = name => {
     if (!name) {
@@ -14,7 +15,7 @@ const validateFunction = name => {
     }
 }
 
-export function LogIn() {
+export function LogInAll() {
     const [errorMsg, setErrorMsg] = useState(null)
     const [name, setName] = useState('')
 
@@ -42,37 +43,20 @@ export function LogIn() {
     }
 
     return (
-        <div className='LogIn'>
+        <div className="LogIn">
             <Container className='LogIn-container'>
                 <Title className='LogIn-container__title'>Hello!</Title>
                 <Text className='LogIn-container__text'>
                     Looks like you are for the first time here!
                 </Text>
-                <Container className='LogIn-container__content'>
-                <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-                    <Text color="dimmed" size="sm" align="center" mt={5}>
-                        Give us your name and we will organize our application for you :)
-                    </Text>
-                    <TextInput
-                        onChange={handleChange}
-                        error={errorMsg}
-                        label="Name"
-                        placeholder="Enter your name here"
-                        required
-                    />
-                    <Button
-                        onClick={handleClick}
-                        className='LogIn-container__content-btn'
-                        fullWidth
-                        mt="xl"
-                    >
-                        Sign in
-                    </Button>
-                </Paper>
-                </Container>
+                <LogInContainer
+                    error={errorMsg}
+                    onClick={handleClick}
+                    onChange={handleChange}
+                />
                 <Image src={image} className='LogIn-container__img'/>
             </Container>
             <PageFooterBeforeMainPage/>
         </div>
-    );
+    )
 }

@@ -12,13 +12,13 @@ const expenses = [
     {id: 6, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
     {id: 7, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
     {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 9, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 10, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 11, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 12, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 13, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 14, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 15, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
 ]
 
 const useStyles = createStyles((theme) => ({

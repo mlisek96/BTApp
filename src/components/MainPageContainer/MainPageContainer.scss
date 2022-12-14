@@ -1,11 +1,10 @@
-.MainPage {
-  --color-text-main: #041E24;
-  --color-text-basic: #B9CBB5;
+@import "src/scss/settings/colors";
 
+.MainPageContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--color-text-main);
+  color: $color-text-main;
   flex-grow: 2;
 
   &__header {
@@ -15,7 +14,7 @@
   }
 
   &__paragraph {
-    color: var(--color-text-basic);
+    color: $color-text-basic;
     font-size: 1.25rem;
   }
 }

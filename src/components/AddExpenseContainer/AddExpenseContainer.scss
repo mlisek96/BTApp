@@ -1,0 +1,21 @@
+@import "src/scss/settings/colors";
+@import "src/scss/settings/fonts";
+
+.AddExpenseContainer {
+  &__header {
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: $color-text-main;
+    font-family: $font-family-poppins;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    color: $color-text-basic;
+    font-size: 1.25rem;
+    font-family: $font-family-poppins;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}

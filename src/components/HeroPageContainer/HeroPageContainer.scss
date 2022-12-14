@@ -1,15 +1,5 @@
-.HeroPage {
-  background-color: rgb(227, 222, 154);
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  &-container {
-    padding-top: 6rem;
-  }
+.HeroPageContainer {
+  padding-top: 6rem;
 
   &-content {
     text-align: center;
@@ -25,7 +15,7 @@
     }
 
     &__highlight {
-      background-color: rgba(255,255,255,0.5);
+      background-color: rgba(255, 255, 255, 0.5);
       border-radius: 0.25rem;
       padding: 0.25rem 0.75rem;
     }
