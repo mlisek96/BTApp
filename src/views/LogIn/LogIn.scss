@@ -1,0 +1,49 @@
+.LogIn {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(227, 222, 154);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-container {
+    padding-top: 3.85rem;
+
+    &__title {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    &__text {
+      color: #868E96;
+      text-align: center;
+      margin-top: 0.3125rem;
+      font-size: 0.875rem;
+    }
+
+    &__content {
+      width: 26.25rem;
+
+      &-btn {
+        background-color: #2F9363;
+        font-weight: 500;
+
+        &:hover {
+          background-color: rgba(47, 147, 99, 0.75);
+        }
+      }
+
+      &-errorMsg {
+        font-size: 0.75rem;
+        color: red;
+      }
+    }
+
+    &__img {
+      margin: 0 auto;
+      max-width: 25vw;
+    }
+  }
+}

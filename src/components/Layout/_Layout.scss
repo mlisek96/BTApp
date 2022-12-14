@@ -1,0 +1,10 @@
+.Layout {
+  min-height: 100vh;
+  display: flex;
+  background-color: #f3f8f6;
+
+  &__main {
+    flex-grow: 1;
+    margin: 2rem;
+  }
+}

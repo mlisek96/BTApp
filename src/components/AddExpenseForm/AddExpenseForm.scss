@@ -1,0 +1,12 @@
+.AddExpenseForm {
+
+  &-input {
+    background-color: #ffffff;
+    border-color: #CED4DA;
+    color: #041E24;
+
+    &::placeholder {
+      color: #ADB5BD;
+    }
+  }
+}
