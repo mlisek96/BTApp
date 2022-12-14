@@ -1,13 +1,13 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {MantineProvider} from '@mantine/core';
 import {Layout} from "./components/Layout";
-import {MainPage} from "./views/MainPage/index.jsx";
-import {HeroPage} from "./views/HeroPage/HeroPage.jsx";
-import {LogIn} from "./views/LogIn/LogIn.jsx";
-import {AddExpense} from "./views/AddExpense/AddExpense.jsx";
-import {ExpensesTable} from "./views/ExpensesTable/ExpensesTable.jsx";
-import {ExpensesTableCategory} from "./views/ExpensesTableCategory/ExpensesTableCategory";
-import {NotFoundPage} from "./views/404Page/404Page";
+import {MainPage} from "./views/MainPage.jsx";
+import {HeroPage} from "./views/HeroPage.jsx";
+import {LogIn} from "./views/LogIn.jsx";
+import {AddExpense} from "./views/AddExpense.jsx";
+import {ExpensesTable} from "./views/ExpensesTable.jsx";
+import {ExpensesTableCategory} from "./views/ExpensesTableCategory.jsx";
+import {NotFoundPage} from "./views/404Page.jsx";
 import './App.scss'
 
 function App() {
