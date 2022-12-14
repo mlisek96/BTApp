@@ -1,0 +1,36 @@
+.NotFoundPage {
+  background-color: rgb(227, 222, 154);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-container {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+
+    &__title {
+      font-weight: 900;
+      font-size: 2.125rem;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif;
+      color: #041E24;
+    }
+
+    &__button {
+      background-color: #2F9363;
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+
+      &:hover {
+        background-color: rgba(47, 147, 99, 0.75);
+      }
+    }
+
+    &__img {
+      transform: scale(1.5);
+    }
+  }
+}

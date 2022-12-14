@@ -1,0 +1,22 @@
+.AddExpense {
+  --color-text-main: #041E24;
+  --color-text-basic: #B9CBB5;
+
+
+  &__header {
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: var(--color-text-main);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    color: var(--color-text-basic);
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
