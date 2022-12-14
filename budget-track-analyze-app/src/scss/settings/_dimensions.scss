@@ -1,0 +1,8 @@
+$container-width: 100vw;
+$container-height: 100vh;
+
+.container {
+  max-width: $container-width;
+  max-height: $container-height;
+  margin: 0 auto;
+}
