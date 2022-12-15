@@ -1,32 +1,10 @@
 .PageFooter {
   text-align: center;
 
-  &__author {
-    font-size: 0.8125rem;
-    color: #ffffff;
-    opacity: 0.7;
-    margin: 0.1rem;
-
-    &-github {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 3px;
-      margin: 0 6px;
-      padding: 4px 9px 3px 9px;
-
-      &__icon {
-        transform: translateY(15%);
-      }
-    }
-  }
-
   &__text {
     margin: 0.5rem;
     font-size: 0.75rem;
     color: #ffffff;
     opacity: 0.2;
-
   }
 }

@@ -1,10 +1,10 @@
+import {useState} from "react";
 import {createStyles, Group, Paper, TextInput} from "@mantine/core";
+import {IconCurrencyZloty} from '@tabler/icons';
 import {ChooseCategory} from "../ChooseCategory/ChooseCategory";
 import {DataPicker} from "../DataPicker/DataPicker";
 import {ButtonSubmit} from "../ButtonSubmit/ButtonSubmit.jsx";
 import {ButtonClose} from "../ButtonClose/ButtonClose";
-import {IconCurrencyZloty} from '@tabler/icons';
-import {useState} from "react";
 
 
 const validateFunction = (form) => {

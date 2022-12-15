@@ -1,5 +1,7 @@
+@import "src/scss/settings/colors";
+
 .HeroPage {
-  background-color: rgb(227, 222, 154);
+  background-color: $color-background_hero;
   height: 100vh;
   width: 100vw;
   overflow: hidden;

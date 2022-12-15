@@ -1,5 +1,5 @@
 import {RingProgress, Text, Paper, Group} from '@mantine/core';
-import './RingProgressByCategory.scss'
+import './RingProgressByCategory.scss';
 
 interface StatsRingProps {
     data: {
@@ -51,17 +51,28 @@ interface StatsRingProps {
 export function RingProgressByCategory() {
     return (
         <div>
-            <Paper className='RingProgressByCategory' withBorder shadow="md" radius="md" p="xs">
+            <Paper
+                className='RingProgressByCategory'
+                withBorder
+                shadow="md"
+                radius="md"
+                p="xs"
+            >
                 <Group>
                     <RingProgress
                         size={150}
                         roundCaps
                         thickness={15}
-                        // label={
-                        //     <Text size="xs" align="center" px="xs" sx={{pointerEvents: 'none'}}>
-                        //         Hover sections to see tooltips
-                        //     </Text>
-                        // }
+                        label={
+                            <Text
+                            size="xs"
+                            align="center"
+                            px="xs"
+                            sx={{pointerEvents: 'none'}}
+                            >
+                                Hover sections to see tooltips
+                            </Text>
+                        }
                         sections={[
                             {value: 10, color: 'cyan', tooltip: 'Documents – 40 Gb'},
                             {value: 10, color: 'orange', tooltip: 'Apps – 25 Gb'},

@@ -1,5 +1,5 @@
 import {RingProgress, Text, Paper, Group} from '@mantine/core';
-import './RingProgressTotal.scss'
+import './RingProgressTotal.scss';
 
 interface StatsRingProps {
     data: {
@@ -13,7 +13,14 @@ interface StatsRingProps {
 export function RingProgressTotal({data}: StatsRingProps) {
     const stats = data.map((stat) => {
         return (
-            <Paper className='RingProgressTotal' withBorder shadow="md" radius="md" p="xs" key={stat.label}>
+            <Paper
+                className='RingProgressTotal'
+                withBorder
+                shadow="md"
+                radius="md"
+                p="xs"
+                key={stat.label}
+            >
                 <Group>
                     <RingProgress
                         size={150}
@@ -23,10 +30,18 @@ export function RingProgressTotal({data}: StatsRingProps) {
                     />
 
                     <div>
-                        <Text color="dimmed" size="xs" transform="uppercase" weight={700}>
+                        <Text
+                            color="dimmed"
+                            size="xs"
+                            transform="uppercase"
+                            weight={700}
+                        >
                             Expenses in total
                         </Text>
-                        <Text weight={700} size="xl">
+                        <Text
+                            weight={700}
+                            size="xl"
+                        >
                             {stat.stats}
                         </Text>
                     </div>
@@ -34,6 +49,7 @@ export function RingProgressTotal({data}: StatsRingProps) {
             </Paper>
         );
     });
+
     return (
         <div>
             {stats}

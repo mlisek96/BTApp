@@ -1,7 +1,7 @@
 import {useState} from "react";
+import {Container, Image, Text, Title} from "@mantine/core";
 import {PageFooterBeforeMainPage} from "../PageFooterBeforeMainPage/PageFooterBeforeMainPage.jsx";
 import {LogInContainer} from "../LogInContainer/LogInContainer";
-import {Button, Container, Image, Paper, Text, TextInput, Title} from "@mantine/core";
 import image from "../../images/picture-background-2.png";
 import './LogIn.scss';
 
@@ -45,8 +45,14 @@ export function LogInAll() {
     return (
         <div className="LogIn">
             <Container className='LogIn-container'>
-                <Title className='LogIn-container__title'>Hello!</Title>
-                <Text className='LogIn-container__text'>
+                <Title
+                    className='LogIn-container__title'
+                >
+                    Hello!
+                </Title>
+                <Text
+                    className='LogIn-container__text'
+                >
                     Looks like you are for the first time here!
                 </Text>
                 <LogInContainer
@@ -54,7 +60,10 @@ export function LogInAll() {
                     onClick={handleClick}
                     onChange={handleChange}
                 />
-                <Image src={image} className='LogIn-container__img'/>
+                <Image
+                    src={image}
+                    className='LogIn-container__img'
+                />
             </Container>
             <PageFooterBeforeMainPage/>
         </div>

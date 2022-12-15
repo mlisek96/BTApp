@@ -1,5 +1,5 @@
 import {Outlet} from "react-router-dom";
-import {PageHeader} from "../PageHeader";
+import {PageHeader} from "../PageHeader/PageHeader";
 import {NavbarMinimal} from "../NavbarMinimal/NavbarMinimal.tsx";
 import './_Layout.scss'
 

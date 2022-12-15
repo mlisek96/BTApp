@@ -1,7 +1,8 @@
-import {Link} from "react-router-dom";
-import {Button, Container, Group, Image, Text, Title} from "@mantine/core";
+import {Container, Group, Image, Text, Title} from "@mantine/core";
+import {ButtonGetStarted} from "../ButtonGetStarted/ButtonGetStarted";
 import image from "../../images/picture-background-2.png";
 import './HeroPageContainer.scss';
+import {HighlightText} from "../HighlightText/HighlightText";
 
 export function HeroPageContainer() {
     return (
@@ -9,15 +10,24 @@ export function HeroPageContainer() {
             <Container className='HeroPageContainer'>
                 <div className='HeroPageContainer-content'>
                     <Title className='HeroPageContainer-content__title'>
-                        Welcome in <span className='HeroPageContainer-content__highlight'>BTApp</span>-<br /> BudgetTrackAnalyze App
+                        Welcome in {''}
+                        <HighlightText text={'BTApp'}/>
+                        {''} -
+                        <br />
+                        BudgetTrackAnalyze App
                     </Title>
                     <Text color="dimmed" mt="md">
-                        web app that allows you to <span className='HeroPageContainer-content__highlight'>track</span> and <span className='HeroPageContainer-content__highlight'>analyze</span> your monthly home <span className='HeroPageContainer-content__highlight'>budget</span>
+                        web app that allows you to {''}
+                        <HighlightText text={'track'}/>
+                        {''} and {''}
+                        <HighlightText text={'analyze'}/>
+                        {''} your monthly home {''}
+                        <HighlightText text={'budget'}/>
                     </Text>
-                    <Group>
-                        <Button component={Link} to='/login' radius="xl" size="lg" className='HeroPageContainer-content__button'>
-                            Get started
-                        </Button>
+                    <Group className='HeroPageContainer-content__group'>
+                        <ButtonGetStarted
+                            linkTo={'/login'}
+                        />
                     </Group>
                 </div>
                 <Image src={image} className='HeroPageContainer-img' />
