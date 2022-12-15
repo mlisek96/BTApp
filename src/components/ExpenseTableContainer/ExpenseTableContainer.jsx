@@ -1,22 +1,18 @@
-import {Container, Paper, Text, Title} from "@mantine/core";
+import {Container, Paper} from "@mantine/core";
 import {TableExpensesTotal} from "../TableExpensesTotal/TableExpensesTotal.jsx";
 import {ButtonGroup} from "../ButtonGroup/ButtonGroup.jsx";
+import {Header} from "../Header/Header.jsx";
 import './ExpenseTableContainer.scss';
 
 export function ExpenseTableContainer() {
     return (
         <div className="ExpenseTableContainer">
             <Container mt={16}>
-                <Title
-                    className="ExpenseTableContainer__header"
-                >
-                    Expenses Table
-                </Title>
-                <Text
-                    className="ExpenseTableContainer__description"
-                >
-                    Let's check your expenses table in total
-                </Text>
+                <Header
+                    title={'Expenses Table'}
+                    text={'Let\'s check your expenses table in total'}
+                    marginBottom={'2rem'}
+                />
                     <Paper
                         withBorder
                         shadow="md"

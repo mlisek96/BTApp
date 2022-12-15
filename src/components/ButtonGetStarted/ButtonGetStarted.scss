@@ -1,6 +1,7 @@
+@import "src/scss/settings/colors";
+
 .ButtonGetStarted {
-  margin: 3rem auto 2.5rem;
-  background-color: #2F9363;
+  background-color: $color-icon;
   font-weight: 500;
 
   &:hover {

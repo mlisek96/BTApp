@@ -1,8 +1,8 @@
 import {Container, Group, Image, Text, Title} from "@mantine/core";
 import {ButtonGetStarted} from "../ButtonGetStarted/ButtonGetStarted";
+import {HighlightText} from "../HighlightText/HighlightText";
 import image from "../../images/picture-background-2.png";
 import './HeroPageContainer.scss';
-import {HighlightText} from "../HighlightText/HighlightText";
 
 export function HeroPageContainer() {
     return (
@@ -27,10 +27,17 @@ export function HeroPageContainer() {
                     <Group className='HeroPageContainer-content__group'>
                         <ButtonGetStarted
                             linkTo={'/login'}
+                            mt={'3rem'}
+                            mb={'2.5rem'}
+                            size={'lg'}
+                            label={'Get started'}
                         />
                     </Group>
                 </div>
-                <Image src={image} className='HeroPageContainer-img' />
+                <Image
+                    src={image}
+                    className='HeroPageContainer-img'
+                />
             </Container>
         </div>
     )

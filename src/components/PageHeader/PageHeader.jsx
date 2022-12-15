@@ -1,6 +1,6 @@
-import { Logo } from "../Logo";
-import { Menu } from "../Menu";
-import { AvatarLogo } from "../Avatar";
+import { Logo } from "../Logo/Logo";
+import { Menu } from "../Menu/Menu";
+import { AvatarLogo } from "../Avatar/Avatar";
 import { PageFooter } from "../PageFooter/PageFooter";
 import { ImageMenu } from "../ImageMenu/ImageMenu.jsx";
 import './PageHeader.scss'
