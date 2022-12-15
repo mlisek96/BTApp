@@ -8,22 +8,18 @@ import {TableTransportation} from "../TableTransportation/TableTransportation.js
 import {TableUtilities} from "../TableUtilities/TableUtilities.jsx";
 import {TableHoliday} from "../TableHoliday/TableHoliday.jsx";
 import {ButtonGroup} from "../ButtonGroup/ButtonGroup.jsx";
+import {Header} from "../Header/Header.jsx";
 import './ExpenseTableCategoryContainer.scss';
 
 export function ExpenseTableCategoryContainer() {
     return (
         <div className="ExpenseTableCategory">
             <Container mt={16}>
-                <Title
-                    className="ExpenseTableCategory__header"
-                >
-                    Expenses Table
-                </Title>
-                <Text
-                    className="ExpenseTableCategory__description"
-                >
-                    Let's check your expenses table by category
-                </Text>
+                <Header
+                    title={'Expenses Table'}
+                    text={'Let\'s check your expenses table by category'}
+                    marginBottom={'2rem'}
+                />
                 <Paper
                     withBorder
                     shadow="md"

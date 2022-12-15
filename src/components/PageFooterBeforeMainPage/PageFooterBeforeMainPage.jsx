@@ -1,5 +1,5 @@
 import {GitHubAuthor} from "../GitHubAuthor/GitHubAuthor";
-import './PageFooterBeforeMainPage.scss'
+import './PageFooterBeforeMainPage.scss';
 
 export function PageFooterBeforeMainPage() {
     return (

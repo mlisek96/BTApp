@@ -1,0 +1,27 @@
+@import "src/scss/settings/colors";
+
+.ButtonMenu {
+
+  &__link {
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: $color-text-white;
+    font-size: 1.25rem;
+    align-items: center;
+
+    &:hover {
+      color: $color-hover;
+    }
+  }
+
+  &__icon {
+    stroke-width: 1.5;
+    margin-right: 1rem;
+
+    &:hover {
+      color: $color-hover;
+    }
+  }
+}
