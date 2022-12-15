@@ -1,3 +1,6 @@
+@import "src/scss/settings/colors";
+@import "src/scss/settings/fonts";
+
 .HeroPageContainer {
   padding-top: 6rem;
 
@@ -7,27 +10,15 @@
     margin: 0 auto;
 
     &__title {
-      color: #041E24;
-      font-family: 'Poppins', sans-serif;
+      color: $color-text-main;
+      font-family: $font-family-poppins;
       font-size: 2.75rem;
       line-height: 1.35;
       font-weight: 900;
     }
 
-    &__highlight {
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 0.25rem;
-      padding: 0.25rem 0.75rem;
-    }
-
-    &__button {
-      margin: 3rem auto 2.5rem;
-      background-color: #2F9363;
-      font-weight: 500;
-
-      &:hover {
-        background-color: rgba(47, 147, 99, 0.75);
-      }
+    &__group {
+      justify-content: center;
     }
   }
 

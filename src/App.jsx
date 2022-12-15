@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {MantineProvider} from '@mantine/core';
-import {Layout} from "./components/Layout";
+import {Layout} from "./components/Layout/Layout";
 import {MainPage} from "./views/MainPage.jsx";
 import {HeroPage} from "./views/HeroPage.jsx";
 import {LogIn} from "./views/LogIn.jsx";

@@ -1,9 +1,11 @@
+@import "src/scss/settings/colors";
+
 .TableTotal {
 
   &-thead {
     position: sticky;
     top: 0;
-    background-color: #ffffff;
+    background-color: $color-text-white;
     transition: box-shadow 150ms ease;
     z-index: 1;
 

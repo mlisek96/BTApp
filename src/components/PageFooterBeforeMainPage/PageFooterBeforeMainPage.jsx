@@ -1,16 +1,18 @@
-import { IconBrandGithub } from '@tabler/icons';
+import {GitHubAuthor} from "../GitHubAuthor/GitHubAuthor";
 import './PageFooterBeforeMainPage.scss'
 
 export function PageFooterBeforeMainPage() {
     return (
         <footer className="PageFooterBeforeMainPage">
-            <div className='PageFooterBeforeMainPage__author'>
-                Created by
-                <a className='PageFooterBeforeMainPage__author-github' href='https://github.com/mlisek96' target='_blank'>
-                    <IconBrandGithub size='16' className='PageFooterBeforeMainPage__author-github__icon'/>
-                    {''} mlisek96
-                </a>
-            </div>
+            <GitHubAuthor
+                style={{
+                    color: '#868e96',
+                }}
+                styleLink={{
+                    color: '#868e96',
+                    backgroundColor: 'rgba(255,255,255,0.25)',
+                }}
+            />
             <div className='PageFooterBeforeMainPage__text'>
                 Image made by pikisuperstar from Freepik
             </div>
