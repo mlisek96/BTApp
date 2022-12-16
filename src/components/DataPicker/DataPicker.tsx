@@ -1,3 +1,4 @@
+import {useState, useEffect} from "react";
 import { Select } from '@mantine/core';
 import './DataPicker.scss'
 
@@ -15,22 +16,28 @@ const data = [
     { value: 'December', label: 'December' },
 ]
 
-// export function DataPicker({error, onChange}) {
-export function DataPicker() {
-    // const [searchValue, onSearchChange] = useState('')
+export function DataPicker({error, setForm}) {
+    const [searchValue, onSearchChange] = useState('')
+
+    useEffect(() => {
+        setForm(prev => {
+            return {
+                ...prev,
+                month: searchValue
+            }
+        })
+    }, [searchValue])
 
     return (
         <Select
             className='DataPicker'
-            // value={value}
-            // onChange={onChange}
-            // searchValue={searchValue}
-            // onSearchChange={onSearchChange}
-            // error={error}
             name='month'
             label="Choose month"
             placeholder="Pick one"
             data={data}
+            error={error}
+            onSearchChange={onSearchChange}
+            searchValue={searchValue}
         />
     );
 }

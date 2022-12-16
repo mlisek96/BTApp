@@ -1,11 +1,11 @@
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import {createStyles, Group, Paper, TextInput} from "@mantine/core";
 import {IconCurrencyZloty} from '@tabler/icons';
 import {ChooseCategory} from "../ChooseCategory/ChooseCategory";
 import {DataPicker} from "../DataPicker/DataPicker";
 import {ButtonSubmit} from "../ButtonSubmit/ButtonSubmit.jsx";
 import {ButtonClose} from "../ButtonClose/ButtonClose";
-
 
 const validateFunction = (form) => {
     const errorMsg = {}
@@ -21,13 +21,13 @@ const validateFunction = (form) => {
         errorMsg.description = 'Entering short description is required'
     }
 
-    // if (!form.category) {
-    //     errorMsg.category = 'Picking a category is required'
-    // }
-    //
-    // if (!form.month) {
-    //     errorMsg.month = 'Picking a month is required'
-    // }
+    if (!form.category) {
+        errorMsg.category = 'Picking a category is required'
+    }
+
+    if (!form.month) {
+        errorMsg.month = 'Picking a month is required'
+    }
 
     return Object.keys(errorMsg).length > 0 ? errorMsg : null;
 };
@@ -54,11 +54,12 @@ export function AddExpenseForm() {
     const [form, setForm] = useState({
         amount: '',
         description: '',
-        // category: '',
+        category: '',
         // month: '',
     })
+    const navigate = useNavigate()
 
-    const handleChangeAmount = (event) => {
+    const handleChange = (event) => {
         const {name, value} = event.target
         setForm(prevForm => {
             return {
@@ -67,44 +68,6 @@ export function AddExpenseForm() {
             };
         });
     }
-
-    const handleChangeDescription = (event) => {
-        const {name, value} = event.target
-        setForm(prevForm => {
-            return {
-                ...prevForm,
-                [name]: value
-            };
-        });
-    }
-
-    // const handleChangeCategory = () => {
-    //     // const {name, value} = event.target
-    //     // setForm(prevForm => {
-    //     //     return {
-    //     //         ...prevForm,
-    //     //         [name]: value
-    //     //     }
-    //     // })
-    //
-    //     setForm({
-    //         category: value
-    //     })
-    // }
-
-    // const handleChangeMonth = (event) => {
-    //     // const {name, searchValue} = event.target
-    //     // setForm(prevForm => {
-    //     //     return {
-    //     //         ...prevForm,
-    //     //         [name]: searchValue
-    //     //     };
-    //     // });
-    //
-    //     setForm({
-    //         month: event.change.values
-    //     })
-    // }
 
     function handleClick(event) {
         event.preventDefault();
@@ -116,45 +79,38 @@ export function AddExpenseForm() {
             return
         }
 
-        setForm({
-            amount: '',
-            description: '',
-            // category: '',
-            // month: '',
-        })
         const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
 
         if (localStorage.getItem('oneMonthExpense')) {
             setForm({
                 amount: arrayOfExpenses.amount,
                 description:arrayOfExpenses.description,
-                // category: arrayOfExpenses.category,
-                // month: arrayOfExpenses.month,
+                category: arrayOfExpenses.category,
+                month: arrayOfExpenses.month,
             })
         } else {
             setForm({
                 amount: '',
                 description: '',
-                // category: '',
-                // month: '',
+                category: '',
+                month: '',
             })
         }
+
         arrayOfExpenses.push(form)
         localStorage.setItem('oneMonthExpense', JSON.stringify(arrayOfExpenses))
-        const  storageArrayOfExpenses = JSON.parse(localStorage.oneMonthExpense)
-        console.log(storageArrayOfExpenses)
-        // location.href = '/expenses-table'
-
+        // const  storageArrayOfExpenses = JSON.parse(localStorage.oneMonthExpense)
+        // console.log(storageArrayOfExpenses)
+        navigate('/expenses-table')
     }
-
 
     return (
         <Paper className='AddExpenseForm' withBorder shadow="md" radius="md" p="xs">
-            <div>
+            <form>
                 <TextInput
                     type='number'
                     value={form.amount}
-                    onChange={handleChangeAmount}
+                    onChange={handleChange}
                     error={errorMsg?.amount}
                     name='amount'
                     // hideControls
@@ -168,7 +124,7 @@ export function AddExpenseForm() {
                 />
                 <TextInput
                     value={form.description}
-                    onChange={handleChangeDescription}
+                    onChange={handleChange}
                     error={errorMsg?.description}
                     name='description'
                     label="Description"
@@ -177,16 +133,12 @@ export function AddExpenseForm() {
                     classNames={{input: classes.input, label: classes.inputLabel}}
                 />
                 <ChooseCategory
-                    // error={errorMsg?.category}
-                    // // value={form.category}
-                    // onChange={handleChangeCategory}
-                    // // name='category'
+                    error={errorMsg?.category}
+                    setForm={setForm}
                 />
                 <DataPicker
-                    // error={errorMsg?.month}
-                    // // value={form.month}
-                    // searchValue={form.month}
-                    // onChange={handleChangeMonth}
+                    error={errorMsg?.month}
+                    setForm={setForm}
                 />
                 <Group position="right" mt="lg">
                     <ButtonSubmit
@@ -194,7 +146,7 @@ export function AddExpenseForm() {
                     />
                     <ButtonClose/>
                 </Group>
-            </div>
+            </form>
         </Paper>
     )
 }

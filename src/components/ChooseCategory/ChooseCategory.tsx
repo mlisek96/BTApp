@@ -1,7 +1,6 @@
-import {forwardRef, useState} from 'react';
+import {forwardRef, useEffect, useState} from 'react';
 import { Group, Avatar, Text, Select } from '@mantine/core';
 import './ChooseCategory.scss'
-
 
 const data = [
     {
@@ -85,19 +84,22 @@ const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
     )
 );
 
-// export function ChooseCategory({error, onChange}) {
-export function ChooseCategory() {
-    // const [value, setValue] = useState({value :''})
-    //
-    // const handleChangeCategory = (event) => {
-    //     setValue({value: event.target.value})
-    // }
+export function ChooseCategory({error, setForm}) {
+    const [searchValue, onSearchChange] = useState('')
+
+    useEffect(() => {
+        setForm(prev => {
+            return {
+                ...prev,
+                category: searchValue
+            }
+        })
+    }, [searchValue])
+
 
     return (
         <Select
-            // onChange={onChange}
-            // value={value}
-            // error={error}
+            error={error}
             name='category'
             className='ChooseCategory'
             label="Choose category"
@@ -111,6 +113,8 @@ export function ChooseCategory() {
                 item.label.toLowerCase().includes(value.toLowerCase().trim()) ||
                 item.description.toLowerCase().includes(value.toLowerCase().trim())
             }
+            onSearchChange={onSearchChange}
+            searchValue={searchValue}
         />
     );
 }
