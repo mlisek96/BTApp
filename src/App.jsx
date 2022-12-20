@@ -8,7 +8,7 @@ import {AddExpense} from "./views/AddExpense.jsx";
 import {ExpensesTable} from "./views/ExpensesTable.jsx";
 import {ExpensesTableCategory} from "./views/ExpensesTableCategory.jsx";
 import {NotFoundPage} from "./views/404Page.jsx";
-import './App.scss'
+import './App.scss';
 
 function App() {
     return (
