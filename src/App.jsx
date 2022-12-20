@@ -12,21 +12,25 @@ import './App.scss';
 
 function App() {
     return (
-        <MantineProvider withGlobalStyles withNormalizeCSS theme={{
-            fontFamily: 'Poppins, sans serif',
-        }}
+        <MantineProvider
+            withGlobalStyles
+            withNormalizeCSS
+            theme={{
+                fontFamily: 'Poppins, sans serif',
+            }}
         >
             <Router>
                 <Routes>
-                    <Route path='/BTApp' element={<HeroPage/>}/>
-                    <Route path='/login' element={<LogIn/>}/>
-                    <Route path='/' element={<Layout/>}>
-                        <Route path='/main-page' element={<MainPage/>}/>
-                        <Route path='/add-expense' element={<AddExpense/>}/>
-                        <Route path='/expenses-table' element={<ExpensesTable/>}/>
-                        <Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
+                    <Route path='/BTApp' element={<HeroPage/>}>
+                        <Route path='/login' element={<LogIn/>}/>
+                        <Route path='/' element={<Layout/>}>
+                            <Route path='/main-page' element={<MainPage/>}/>
+                            <Route path='/add-expense' element={<AddExpense/>}/>
+                            <Route path='/expenses-table' element={<ExpensesTable/>}/>
+                            <Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
+                        </Route>
                     </Route>
-                    <Route path='*' element={<NotFoundPage />}/>
+                    <Route path='*' element={<NotFoundPage/>}/>
                 </Routes>
             </Router>
         </MantineProvider>
