@@ -18,7 +18,7 @@ function App() {
         >
             <Router>
                 <Routes>
-                    <Route path='/' element={<HeroPage/>}/>
+                    <Route path='/BTApp' element={<HeroPage/>}/>
                     <Route path='/login' element={<LogIn/>}/>
                     <Route path='/' element={<Layout/>}>
                         <Route path='/main-page' element={<MainPage/>}/>
