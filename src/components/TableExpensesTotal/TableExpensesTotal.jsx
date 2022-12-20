@@ -1,24 +1,24 @@
+import {useState, useEffect} from 'react';
 import {ActionIcon, ScrollArea, Table, createStyles} from '@mantine/core';
 import {IconX} from '@tabler/icons';
-import {useState} from 'react';
-import './TableExpensesTotal.scss'
+import './TableExpensesTotal.scss';
 
 const expenses = [
-    {id: 1, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 2, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 3, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 4, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 5, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 6, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 7, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 9, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 10, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 11, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 12, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 13, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 14, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 15, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 1, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 2, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 3, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 4, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 5, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 6, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 7, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 8, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 9, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 10, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 11, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 12, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 13, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 14, category: 'home', amount: 123, description: 'biedronka zakupy'},
+    {id: 15, category: 'home', amount: 123, description: 'biedronka zakupy'},
 ]
 
 const useStyles = createStyles((theme) => ({
@@ -30,18 +30,51 @@ const useStyles = createStyles((theme) => ({
 export function TableExpensesTotal() {
     const {classes, cx} = useStyles();
     const [scrolled, setScrolled] = useState(false);
+    const [form, setForm] = useState({
+        amount: '',
+        description: '',
+        category: '',
+        month: '',
+    })
 
     // const rows = data.map((row) => (
-    //     <tr key={row.name}>
+    //     <tr key={row.id}>
     //         <td>{row.name}</td>
     //         <td>{row.email}</td>
     //         <td>{row.company}</td>
     //     </tr>
     // ));
 
+    useEffect(() => {
+        // const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
+        //
+        // arrayOfExpenses.forEach = (singleExpense) => {
+        //     setForm({
+        //         amount: singleExpense.amount,
+        //         description:singleExpense.description,
+        //         category: singleExpense.category,
+        //         month: singleExpense.month,
+        //     })
+        // }
+
+        if (localStorage.getItem('oneMonthExpense') !== null) {
+            const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
+            arrayOfExpenses.forEach = (singleExpense) => {
+                setForm({
+                    amount: singleExpense.amount,
+                    description:singleExpense.description,
+                    category: singleExpense.category,
+                    month: singleExpense.month,
+                })
+            }
+        }
+        console.log(JSON.parse(localStorage.oneMonthExpense))
+        console.log(form)
+    },[])
+
     const rows = expenses.map((expense) => (
         <tr key={expense.id}>
-            <td>{expense.iconCategory}</td>
+            <td>{expense.category}</td>
             <td>{expense.amount + ' zł'}</td>
             <td>{expense.description}</td>
             <td><ActionIcon><IconX/></ActionIcon></td>
@@ -64,6 +97,5 @@ export function TableExpensesTotal() {
                 </Table>
             </ScrollArea>
         </div>
-
     );
 }

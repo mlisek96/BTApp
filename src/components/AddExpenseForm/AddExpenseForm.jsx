@@ -55,7 +55,7 @@ export function AddExpenseForm() {
         amount: '',
         description: '',
         category: '',
-        // month: '',
+        month: '',
     })
     const navigate = useNavigate()
 
@@ -81,7 +81,7 @@ export function AddExpenseForm() {
 
         const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
 
-        if (localStorage.getItem('oneMonthExpense')) {
+        if (localStorage.getItem('oneMonthExpense') !== null) {
             setForm({
                 amount: arrayOfExpenses.amount,
                 description:arrayOfExpenses.description,
