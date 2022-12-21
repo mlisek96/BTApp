@@ -37,11 +37,11 @@ export function LogInAll() {
         // console.log('submitted', name)
         localStorage.setItem('valueNameTaken', name);
         // location.href = '/user/main-page';
-        navigate('/main-page');
+        navigate('/user/main-page');
     }
 
     if (localStorage.getItem('valueNameTaken')) {
-        location.href = '/main-page';
+        location.href = '/user/main-page';
         // navigate('/user/main-page');
     }
 
