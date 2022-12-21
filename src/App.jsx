@@ -23,11 +23,11 @@ function App() {
                 <Routes>
                     <Route path='/BTApp' element={<HeroPage/>}/>
                     <Route path='/login' element={<LogIn/>}/>
-                    <Route path='/layout' element={<Layout/>}>
-                        <Route path='/layout/main-page' element={<MainPage/>}/>
-                        <Route path='/layout/add-expense' element={<AddExpense/>}/>
-                        <Route path='/layout/expenses-table' element={<ExpensesTable/>}/>
-                        <Route path='/layout/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
+                    <Route path='/' element={<Layout/>}>
+                        <Route path='/main-page' element={<MainPage/>}/>
+                        <Route path='/add-expense' element={<AddExpense/>}/>
+                        <Route path='/expenses-table' element={<ExpensesTable/>}/>
+                        <Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
                     </Route>
                     <Route path='*' element={<NotFoundPage/>}/>
                 </Routes>

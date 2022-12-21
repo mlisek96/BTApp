@@ -1,5 +1,6 @@
 {
   "name": "budget-trakck-analyze-app",
+  "homepage": "https://mlisek96.github.io/BTApp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
