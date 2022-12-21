@@ -41,8 +41,8 @@ export function LogInAll() {
     }
 
     if (localStorage.getItem('valueNameTaken')) {
-        // location.href = '/user/main-page';
-        navigate('/user/main-page');
+        location.href = '/user/main-page';
+        // navigate('/user/main-page');
     }
 
     return (

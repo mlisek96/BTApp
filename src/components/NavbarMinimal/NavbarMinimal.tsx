@@ -97,26 +97,26 @@ export function NavbarMinimal() {
     return (
         <Navbar className='Navbar' width={{base: 80}} p="md">
             <Center>
-                <Link to='/main-page'>
+                <Link to='/user/main-page'>
                     <IconReceipt2 className='Navbar__logo'/>
                 </Link>
             </Center>
             <Navbar.Section grow mt={100}>
                 <Stack justify="center" spacing={0}>
-                    <Link to='/add-expense'>
+                    <Link to='/user/add-expense'>
                         {links[0]}
                     </Link>
-                    <Link to='/main-page'>
+                    <Link to='/user/main-page'>
                         {links[1]}
                     </Link>
-                    <Link to='/expenses-table'>
+                    <Link to='/user/expenses-table'>
                         {links[2]}
                     </Link>
                 </Stack>
             </Navbar.Section>
             <Navbar.Section>
                 <Stack justify="center" spacing={0}>
-                    <Link to='/' onClick={handleClick}>
+                    <Link to='/BTApp' onClick={handleClick}>
                         {links[3]}
                     </Link>
                 </Stack>

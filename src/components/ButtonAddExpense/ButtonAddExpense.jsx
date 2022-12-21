@@ -8,7 +8,7 @@ export function ButtonAddExpense() {
         <div className='ButtonAddExpense' style={{width: 200}}>
             <Button
                 className='ButtonAddExpense__button'
-                component={ Link } to="/add-expense"
+                component={ Link } to="/user/add-expense"
                 variant="light"
                 fullWidth
                 color="gray"
