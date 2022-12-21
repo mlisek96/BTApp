@@ -1,4 +1,5 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+// import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {HashRouter as Router, Routes, Route} from "react-router-dom";
 import {MantineProvider} from '@mantine/core';
 import {Layout} from "./components/Layout/Layout";
 import {MainPage} from "./views/MainPage.jsx";
