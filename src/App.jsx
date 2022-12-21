@@ -12,6 +12,27 @@ import './App.scss';
 
 function App() {
     return (
+        // <MantineProvider
+        //     withGlobalStyles
+        //     withNormalizeCSS
+        //     theme={{
+        //         fontFamily: 'Poppins, sans serif',
+        //     }}
+        // >
+        //     <Router>
+        //         <Routes>
+        //             <Route path='/' element={<HeroPage/>}/>
+        //             <Route path='/login' element={<LogIn/>}/>
+        //             <Route path='/' element={<Layout/>}>
+        //                 <Route path='/main-page' element={<MainPage/>}/>
+        //                 <Route path='/add-expense' element={<AddExpense/>}/>
+        //                 <Route path='/expenses-table' element={<ExpensesTable/>}/>
+        //                 <Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
+        //             </Route>
+        //             <Route path='*' element={<NotFoundPage/>}/>
+        //         </Routes>
+        //     </Router>
+        // </MantineProvider>
         <MantineProvider
             withGlobalStyles
             withNormalizeCSS
@@ -21,13 +42,15 @@ function App() {
         >
             <Router>
                 <Routes>
-                    <Route path='/BTApp' element={<HeroPage/>}/>
-                    <Route path='/login' element={<LogIn/>}/>
-                    <Route path='/' element={<Layout/>}>
-                        <Route path='/main-page' element={<MainPage/>}/>
-                        <Route path='/add-expense' element={<AddExpense/>}/>
-                        <Route path='/expenses-table' element={<ExpensesTable/>}/>
-                        <Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
+                    <Route path='/'>
+                        <Route path='/' element={<HeroPage/>}/>
+                        <Route path='/login' element={<LogIn/>}/>
+                        <Route path='/user' element={<Layout/>}>
+                            <Route path='/user/main-page' element={<MainPage/>}/>
+                            <Route path='/user/add-expense' element={<AddExpense/>}/>
+                            <Route path='/user/expenses-table' element={<ExpensesTable/>}/>
+                            <Route path='/user/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
+                        </Route>
                     </Route>
                     <Route path='*' element={<NotFoundPage/>}/>
                 </Routes>

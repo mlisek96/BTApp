@@ -1,6 +1,13 @@
 import {useState} from 'react';
-import {Link} from "react-router-dom";
-import {Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack} from '@mantine/core';
+import {Link, useNavigate} from "react-router-dom";
+import {
+    Navbar,
+    Center,
+    Tooltip,
+    UnstyledButton,
+    createStyles,
+    Stack
+} from '@mantine/core';
 import {
     TablerIcon,
     IconHome2,
@@ -9,7 +16,7 @@ import {
     IconLogout,
     IconReceipt2,
 } from '@tabler/icons';
-import './NavbarMinimal.scss'
+import './NavbarMinimal.scss';
 
 
 const useStyles = createStyles((theme) => ({
@@ -63,8 +70,9 @@ const mockdata = [
 ];
 
 export function NavbarMinimal() {
-    const [active, setActive] = useState(2);
+    const [active, setActive] = useState(0);
     const [logIn, setLogIn] = useState(true)
+    const navigate = useNavigate()
 
     const links = mockdata.map((link, index) => (
         <NavbarLink
@@ -78,11 +86,11 @@ export function NavbarMinimal() {
     function handleClick(event) {
         event.preventDefault()
 
-        if(logIn) {
+        if (logIn) {
             setLogIn(logIn)
             setLogIn(false);
             localStorage.clear();
-            location.href = '/';
+            navigate('/');
         }
     }
 

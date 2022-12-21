@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import {Container, Image, Text, Title} from "@mantine/core";
 import {PageFooterBeforeMainPage} from "../PageFooterBeforeMainPage/PageFooterBeforeMainPage.jsx";
 import {LogInContainer} from "../LogInContainer/LogInContainer";
@@ -18,6 +19,7 @@ const validateFunction = name => {
 export function LogInAll() {
     const [errorMsg, setErrorMsg] = useState(null)
     const [name, setName] = useState('')
+    const navigate = useNavigate()
 
     function handleChange(event) {
         setName(event.target.value)
@@ -32,14 +34,15 @@ export function LogInAll() {
             // console.log('błąd - name')
             return
         }
-
         // console.log('submitted', name)
         localStorage.setItem('valueNameTaken', name);
-        location.href = '/main-page';
+        // location.href = '/user/main-page';
+        navigate('/user/main-page');
     }
 
     if (localStorage.getItem('valueNameTaken')) {
-        location.href = '/main-page';
+        // location.href = '/user/main-page';
+        navigate('/user/main-page');
     }
 
     return (
