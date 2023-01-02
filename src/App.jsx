@@ -27,36 +27,13 @@ function App() {
                         <Route path='/main-page' element={<MainPage/>}/>
                         <Route path='/add-expense' element={<AddExpense/>}/>
                         <Route path='/expenses-table' element={<ExpensesTable/>}/>
-                        {/*<Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>*/}
-                        <Route path='/expenses-table-by-category' element={<ExpensesTableCategory/>}/>
+                        <Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
+                        {/*<Route path='/expenses-table-by-category' element={<ExpensesTableCategory/>}/>*/}
                     </Route>
                     <Route path='*' element={<NotFoundPage/>}/>
                 </Routes>
             </Router>
         </MantineProvider>
-        // <MantineProvider
-        //     withGlobalStyles
-        //     withNormalizeCSS
-        //     theme={{
-        //         fontFamily: 'Poppins, sans serif',
-        //     }}
-        // >
-        //     <Router>
-        //         <Routes>
-        //             {/*<Route path='/'>*/}
-        //                 <Route path='/BTApp' element={<HeroPage/>}/>
-        //                 <Route path='/login' element={<LogIn/>}/>
-        //                 <Route element={<Layout/>}>
-        //                     <Route path='/main-page' element={<MainPage/>}/>
-        //                     <Route path='/add-expense' element={<AddExpense/>}/>
-        //                     <Route path='/expenses-table' element={<ExpensesTable/>}/>
-        //                     <Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
-        //                 </Route>
-        //             {/*</Route>*/}
-        //             <Route path='*' element={<NotFoundPage/>}/>
-        //         </Routes>
-        //     </Router>
-        // </MantineProvider>
     );
 }
 
