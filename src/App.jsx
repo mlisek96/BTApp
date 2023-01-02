@@ -28,7 +28,6 @@ function App() {
                         <Route path='/add-expense' element={<AddExpense/>}/>
                         <Route path='/expenses-table' element={<ExpensesTable/>}/>
                         <Route path='/expenses-table/by-category' element={<ExpensesTableCategory/>}/>
-                        {/*<Route path='/expenses-table-by-category' element={<ExpensesTableCategory/>}/>*/}
                     </Route>
                     <Route path='*' element={<NotFoundPage/>}/>
                 </Routes>

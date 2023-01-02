@@ -1,6 +1,7 @@
 import {Container, Text, Paper, Group, Avatar} from "@mantine/core";
 import {TableGroceriesTable} from "./TableGroceriesTable.jsx";
-import './TableGroceries.scss'
+import IconGroceries from '../../images/icon-groceries.png';
+import './TableGroceries.scss';
 
 
 export function TableGroceries() {
@@ -9,7 +10,7 @@ export function TableGroceries() {
             <Container mt={16}>
                 <Paper withBorder shadow="md" radius="md" p="md" classNames='Table__paper'>
                     <Group className='TableGroceries-group'>
-                        <Avatar src={'../src/images/icon-groceries.png'}/>
+                        <Avatar src={IconGroceries}/>
                         <Text className="TableGroceries-group__title">Groceries</Text>
                     </Group>
                     <TableGroceriesTable/>
