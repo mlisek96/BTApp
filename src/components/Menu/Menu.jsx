@@ -9,12 +9,12 @@ export function Menu() {
         <div className="Menu">
             <ButtonAddExpense />
             <ButtonMenu
-                linkTo={'/user/main-page'}
+                linkTo={'main-page'}
                 label={'Main Page'}
                 icon={<IconHome className="ButtonMenu__icon"/>}
             />
             <ButtonMenu
-                linkTo={'/user/expenses-table'}
+                linkTo={'/expenses-table'}
                 label={'Expenses Table'}
                 icon={<IconListDetails className='ButtonMenu__icon'/>}
             />
