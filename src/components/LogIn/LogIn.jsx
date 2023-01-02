@@ -36,8 +36,8 @@ export function LogInAll() {
         }
         // console.log('submitted', name)
         localStorage.setItem('valueNameTaken', name);
-        location.href = '/main-page';
-        // navigate('/main-page');
+        // location.href = '/main-page';
+        navigate('/main-page');
     }
 
     // if (localStorage.getItem('valueNameTaken')) {
