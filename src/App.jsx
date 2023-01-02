@@ -23,7 +23,7 @@ function App() {
                 <Routes>
                     <Route path='/BTApp' element={<Home/>}/>
                     <Route path='/login' element={<LogIn/>}/>
-                    <Route path='/' element={<Layout/>}>
+                    <Route element={<Layout/>}>
                         <Route path='/main-page' element={<MainPage/>}/>
                         <Route path='/add-expense' element={<AddExpense/>}/>
                         <Route path='/expenses-table' element={<ExpensesTable/>}/>
