@@ -1,6 +1,6 @@
 import {HeroPageAll} from "../components/HeroPage/HeroPage.jsx";
 
-export function HeroPage() {
+export function Home() {
     return (
         <div>
             <HeroPageAll />
