@@ -5,6 +5,8 @@
 
   &__picture {
     transform: scale(125%);
-    overflow: hidden;
+    //overflow: hidden;
+    //object-fit: contain;
+    //background-size: cover;
   }
 }

@@ -4,8 +4,15 @@ import './ButtonArrowLeft.scss'
 
 export function ButtonArrowLeft() {
     return (
-        <ActionIcon className='ButtonArrowLeft' size="lg" radius="lg" variant="filled">
-            <IconArrowBigLeft size={20} />
+        <ActionIcon
+            className='ButtonArrowLeft'
+            size="lg"
+            radius="lg"
+            variant="filled"
+        >
+            <IconArrowBigLeft
+                size={20}
+            />
         </ActionIcon>
     )
 }

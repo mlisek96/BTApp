@@ -101,7 +101,7 @@ export function AddExpenseForm() {
         localStorage.setItem('oneMonthExpense', JSON.stringify(arrayOfExpenses))
         // const  storageArrayOfExpenses = JSON.parse(localStorage.oneMonthExpense)
         // console.log(storageArrayOfExpenses)
-        navigate('/user/expenses-table')
+        navigate('/expenses-table')
     }
 
     return (

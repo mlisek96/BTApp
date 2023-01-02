@@ -4,7 +4,13 @@ import './ButtonByCategory.scss'
 
 export function ButtonByCategory() {
     return (
-        <Button className='ButtonByCategory' component={Link} to='/expenses-table/by-category' radius="xl" size="sm">
+        <Button
+            className='ButtonByCategory'
+            component={Link}
+            to='/expenses-table/by-category'
+            radius="xl"
+            size="sm"
+        >
             Category
         </Button>
     )

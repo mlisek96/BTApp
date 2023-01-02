@@ -5,8 +5,13 @@ import './Logo.scss'
 export function Logo() {
     return (
         <div className="Logo">
-            <Link className="Logo__name" to='/main-page'>
-                <IconReceipt2 className='Logo__icon'/>
+            <Link
+                className="Logo__name"
+                to='/main-page'
+            >
+                <IconReceipt2
+                    className='Logo__icon'
+                />
                 BTApp
             </Link>
         </div>
