@@ -40,10 +40,10 @@ export function LogInAll() {
         navigate('/main-page');
     }
 
-    if (localStorage.getItem('valueNameTaken')) {
-        // location.href = '/main-page';
-        navigate('/main-page');
-    }
+    // if (localStorage.getItem('valueNameTaken')) {
+    //     // location.href = '/main-page';
+    //     navigate('/main-page');
+    // }
 
     return (
         <div className="LogIn">
