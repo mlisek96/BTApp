@@ -45,32 +45,32 @@ export function TableExpensesTotal() {
     //     </tr>
     // ));
 
-    useEffect(() => {
-        // const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
-        //
-        // arrayOfExpenses.forEach = (singleExpense) => {
-        //     setForm({
-        //         amount: singleExpense.amount,
-        //         description:singleExpense.description,
-        //         category: singleExpense.category,
-        //         month: singleExpense.month,
-        //     })
-        // }
-
-        if (localStorage.getItem('oneMonthExpense') !== null) {
-            const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
-            arrayOfExpenses.forEach = (singleExpense) => {
-                setForm({
-                    amount: singleExpense.amount,
-                    description:singleExpense.description,
-                    category: singleExpense.category,
-                    month: singleExpense.month,
-                })
-            }
-        }
-        console.log(JSON.parse(localStorage.oneMonthExpense))
-        console.log(form)
-    },[])
+    // useEffect(() => {
+    //     // const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
+    //     //
+    //     // arrayOfExpenses.forEach = (singleExpense) => {
+    //     //     setForm({
+    //     //         amount: singleExpense.amount,
+    //     //         description:singleExpense.description,
+    //     //         category: singleExpense.category,
+    //     //         month: singleExpense.month,
+    //     //     })
+    //     // }
+    //
+    //     if (localStorage.getItem('oneMonthExpense') !== null) {
+    //         const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
+    //         arrayOfExpenses.forEach = (singleExpense) => {
+    //             setForm({
+    //                 amount: singleExpense.amount,
+    //                 description:singleExpense.description,
+    //                 category: singleExpense.category,
+    //                 month: singleExpense.month,
+    //             })
+    //         }
+    //     }
+    //     console.log(JSON.parse(localStorage.oneMonthExpense))
+    //     console.log(form)
+    // },[])
 
     const rows = expenses.map((expense) => (
         <tr key={expense.id}>
