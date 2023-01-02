@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import {ActionIcon, ScrollArea, Table, createStyles} from '@mantine/core';
 import {IconX} from '@tabler/icons';
 import './TableExpensesTotal.scss';
@@ -30,12 +30,12 @@ const useStyles = createStyles((theme) => ({
 export function TableExpensesTotal() {
     const {classes, cx} = useStyles();
     const [scrolled, setScrolled] = useState(false);
-    const [form, setForm] = useState({
-        amount: '',
-        description: '',
-        category: '',
-        month: '',
-    })
+    // const [form, setForm] = useState({
+    //     amount: '',
+    //     description: '',
+    //     category: '',
+    //     month: '',
+    // })
 
     // const rows = data.map((row) => (
     //     <tr key={row.id}>
