@@ -1,5 +1,5 @@
 import { Image } from '@mantine/core';
-// import image from 'src/images/picture-piggy-bank.png'
+import Piggybank from '../../images/picture-piggy-bank.png'
 import './ImageMenu.scss'
 
 export function ImageMenu() {
@@ -7,10 +7,11 @@ export function ImageMenu() {
         <div className='ImageMenu'>
             <Image
                 className='ImageMenu__picture'
-                src='../../src/images/picture-piggy-bank.png'
-                // src={image}
+                // src='../../src/images/picture-piggy-bank.png'
+                src={Piggybank}
                 alt='piggy bank'
                 withPlaceholder
+                translate={}
             />
         </div>
     )
