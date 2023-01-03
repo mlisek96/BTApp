@@ -1,6 +1,7 @@
 import {forwardRef, useEffect, useState} from 'react';
 import { Group, Avatar, Text, Select } from '@mantine/core';
-import './ChooseCategory.scss'
+// import IconGroceries from "../../images/icon-groceries.png";
+import './ChooseCategory.scss';
 
 const data = [
     {
@@ -12,6 +13,7 @@ const data = [
 
     {
         image: '../../images/icon-groceries.png',
+        // image: {IconGroceries},
         label: 'Groceries',
         value: 'Groceries',
         description: 'Just simple daily groceries',
@@ -61,7 +63,7 @@ const data = [
 ];
 
 interface ItemProps extends React.ComponentPropsWithoutRef<'div'> {
-    image: string;
+    image: any;
     label: string;
     description: string;
     value: string;

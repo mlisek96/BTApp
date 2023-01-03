@@ -6,6 +6,7 @@ import {ChooseCategory} from "../ChooseCategory/ChooseCategory";
 import {DataPicker} from "../DataPicker/DataPicker";
 import {ButtonSubmit} from "../ButtonSubmit/ButtonSubmit.jsx";
 import {ButtonClose} from "../ButtonClose/ButtonClose";
+import {useBudgets} from "../../contexts/BudgetContext.jsx";
 
 const validateFunction = (form) => {
     const errorMsg = {}
@@ -58,6 +59,7 @@ export function AddExpenseForm() {
         month: '',
     })
     const navigate = useNavigate()
+    const {addExpense} = useBudgets()
 
     const handleChange = (event) => {
         const {name, value} = event.target
@@ -70,7 +72,40 @@ export function AddExpenseForm() {
     }
 
     function handleClick(event) {
-        event.preventDefault();
+        // event.preventDefault();
+        // const errorMsg = validateFunction(form);
+        //
+        // if (errorMsg) {
+        //     setErrorMsg(errorMsg)
+        //     // console.log('błąd - name')
+        //     return
+        // }
+        //
+        // const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
+        //
+        // if (localStorage.getItem('oneMonthExpense') !== null) {
+        //     setForm({
+        //         amount: arrayOfExpenses.amount,
+        //         description:arrayOfExpenses.description,
+        //         category: arrayOfExpenses.category,
+        //         month: arrayOfExpenses.month,
+        //     })
+        // } else {
+        //     setForm({
+        //         amount: '',
+        //         description: '',
+        //         category: '',
+        //         month: '',
+        //     })
+        // }
+        //
+        // arrayOfExpenses.push(form)
+        // localStorage.setItem('oneMonthExpense', JSON.stringify(arrayOfExpenses))
+        // // const  storageArrayOfExpenses = JSON.parse(localStorage.oneMonthExpense)
+        // // console.log(storageArrayOfExpenses)
+        // navigate('/expenses-table')
+
+        event.preventDefault()
         const errorMsg = validateFunction(form);
 
         if (errorMsg) {
@@ -79,28 +114,12 @@ export function AddExpenseForm() {
             return
         }
 
-        const arrayOfExpenses = JSON.parse(localStorage.getItem('oneMonthExpense')) ?? [];
-
-        if (localStorage.getItem('oneMonthExpense') !== null) {
-            setForm({
-                amount: arrayOfExpenses.amount,
-                description:arrayOfExpenses.description,
-                category: arrayOfExpenses.category,
-                month: arrayOfExpenses.month,
-            })
-        } else {
-            setForm({
-                amount: '',
-                description: '',
-                category: '',
-                month: '',
-            })
-        }
-
-        arrayOfExpenses.push(form)
-        localStorage.setItem('oneMonthExpense', JSON.stringify(arrayOfExpenses))
-        // const  storageArrayOfExpenses = JSON.parse(localStorage.oneMonthExpense)
-        // console.log(storageArrayOfExpenses)
+        addExpense({
+            amount: parseFloat(form.amount),
+            description: form.description,
+            category: form.category,
+            month: form.month,
+        })
         navigate('/expenses-table')
     }
 
