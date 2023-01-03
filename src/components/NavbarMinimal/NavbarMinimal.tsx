@@ -70,7 +70,7 @@ const mockdata = [
 ];
 
 export function NavbarMinimal() {
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState(1);
     const [logIn, setLogIn] = useState(true)
     const navigate = useNavigate()
 

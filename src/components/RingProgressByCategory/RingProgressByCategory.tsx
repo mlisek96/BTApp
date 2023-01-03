@@ -63,16 +63,6 @@ export function RingProgressByCategory() {
                         size={150}
                         roundCaps
                         thickness={15}
-                        label={
-                            <Text
-                            size="xs"
-                            align="center"
-                            px="xs"
-                            sx={{pointerEvents: 'none'}}
-                            >
-                                Hover sections to see tooltips
-                            </Text>
-                        }
                         sections={[
                             {value: 10, color: 'cyan', tooltip: 'Documents – 40 Gb'},
                             {value: 10, color: 'orange', tooltip: 'Apps – 25 Gb'},
@@ -88,9 +78,12 @@ export function RingProgressByCategory() {
                         <Text color="dimmed" size="xs" transform="uppercase" weight={700}>
                             Expenses by Category
                         </Text>
-                        {/*<Text weight={700} size="xl">*/}
-                        {/*    100.000*/}
-                        {/*</Text>*/}
+                        <Text weight={300} size="xs">
+                            Hover sections
+                        </Text>
+                        <Text weight={300} size="xs">
+                            to see amounts
+                        </Text>
                     </div>
                 </Group>
             </Paper>

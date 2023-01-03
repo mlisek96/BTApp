@@ -27,7 +27,7 @@ export function TableTotal() {
     const rows = expenses.map((expense) => (
         <tr key={expense.id}>
             <td>{expense.iconCategory}</td>
-            <td>{expense.amount + ' PLN'}</td>
+            <td>{expense.amount + ' zł'}</td>
             <td>{expense.description}</td>
             <td>
                 <ActionIcon>
