@@ -1,18 +1,8 @@
 import {useState} from "react";
 import {ActionIcon, ScrollArea, Table, createStyles} from '@mantine/core';
 import {IconX} from '@tabler/icons';
+import {useBudgets} from "../../contexts/BudgetContext.jsx";
 import './TableTotal.scss';
-
-const expenses = [
-    {id: 1, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 2, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 3, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 4, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 5, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 6, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 7, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-    {id: 8, iconCategory: 'home', amount: 123, description: 'biedronka zakupy'},
-]
 
 const useStyles = createStyles((theme) => ({
     scrolled: {
@@ -23,14 +13,15 @@ const useStyles = createStyles((theme) => ({
 export function TableTotal() {
     const {classes, cx} = useStyles();
     const [scrolled, setScrolled] = useState(false);
+    const {expenses, deleteExpense} = useBudgets()
 
     const rows = expenses.map((expense) => (
         <tr key={expense.id}>
-            <td>{expense.iconCategory}</td>
+            <td>{expense.category}</td>
             <td>{expense.amount + ' zł'}</td>
             <td>{expense.description}</td>
             <td>
-                <ActionIcon>
+                <ActionIcon onClick={() => deleteExpense(expense)}>
                     <IconX/>
                 </ActionIcon>
             </td>
