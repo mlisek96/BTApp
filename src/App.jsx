@@ -21,8 +21,8 @@ function App() {
         >
             <Router>
                 <Routes>
-                    <Route path='/BTApp' element={<Home/>}/>
-                    {/*<Route path='/' element={<Home/>}/>*/}
+                    {/*<Route path='/BTApp' element={<Home/>}/>*/}
+                    <Route path='/' element={<Home/>}/>
                     <Route path='/login' element={<LogIn/>}/>
                     <Route path='/' element={<Layout/>}>
                         <Route path='/main-page' element={<MainPage/>}/>
