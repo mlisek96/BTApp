@@ -33,7 +33,7 @@ export function NotFoundPageContainer() {
                             or the page has been moved to another URL.
                         </Text>
                         <ButtonGetStarted
-                            linkTo={'/'}
+                            linkTo={'/BTApp'}
                             mb={'2.5rem'}
                             mt={'1.5rem'}
                             size={'md'}
