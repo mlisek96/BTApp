@@ -1,5 +1,5 @@
 import {Container, Text, Paper, Avatar, Group} from "@mantine/core";
-import {TableHolidayTable} from "./TableHolidayTable";
+import {TableCategory} from "../TableCategory/TableCategory.jsx";
 import IconHoliday from '../../images/icon-holiday.png';
 import './TableHoliday.scss';
 
@@ -13,7 +13,7 @@ export function TableHoliday() {
                         <Avatar src={IconHoliday}/>
                         <Text className="TableHoliday-group__title">Holiday</Text>
                     </Group>
-                    <TableHolidayTable/>
+                    <TableCategory category={"Holiday"}/>
                 </Paper>
             </Container>
         </div>

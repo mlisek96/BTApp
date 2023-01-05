@@ -1,5 +1,5 @@
 import {Container, Text, Paper, Avatar, Group} from "@mantine/core";
-import {TableLifeTable} from "./TableLifeTable";
+import {TableCategory} from "../TableCategory/TableCategory.jsx";
 import IconLife from '../../images/icon-life.png';
 import './TableLife.scss'
 
@@ -13,7 +13,7 @@ export function TableLife() {
                         <Avatar src={IconLife}/>
                         <Text className="TableLife-group__title">Life</Text>
                     </Group>
-                    <TableLifeTable />
+                    <TableCategory category={'Life'}/>
                 </Paper>
             </Container>
         </div>

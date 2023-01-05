@@ -1,5 +1,5 @@
 import {Container, Text, Paper, Avatar, Group} from "@mantine/core";
-import {TableTransportationTable} from "./TableTransportationTable";
+import {TableCategory} from "../TableCategory/TableCategory.jsx";
 import IconTransport from '../../images/icon-transport.png';
 import './TableTransportation.scss';
 
@@ -12,7 +12,7 @@ export function TableTransportation() {
                         <Avatar src={IconTransport}/>
                         <Text className="TableTransportation-group__title">Transportation</Text>
                     </Group>
-                    <TableTransportationTable/>
+                    <TableCategory category={'Transportation'}/>
                 </Paper>
             </Container>
         </div>

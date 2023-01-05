@@ -1,5 +1,5 @@
 import {Container, Text, Paper, Avatar, Group} from "@mantine/core";
-import {TableUtilitiesTable} from "./TableUtilitiesTable";
+import {TableCategory} from "../TableCategory/TableCategory.jsx";
 import IconUtilities from '../../images/icon-utilities.png';
 import './TableUtilities.scss'
 
@@ -12,7 +12,7 @@ export function TableUtilities() {
                         <Avatar src={IconUtilities}/>
                         <Text className="TTableUtilities-group__title">Utilities</Text>
                     </Group>
-                    <TableUtilitiesTable/>
+                    <TableCategory category={'Utilities'}/>
                 </Paper>
             </Container>
         </div>

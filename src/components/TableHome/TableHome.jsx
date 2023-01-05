@@ -1,5 +1,5 @@
 import {Container, Text, Paper, Avatar, Group} from "@mantine/core";
-import {TableHomeTable} from "./TableHomeTable";
+import {TableCategory} from "../TableCategory/TableCategory.jsx";
 import IconHome from '../../images/icon-home.png';
 import './TableHome.scss'
 
@@ -13,7 +13,7 @@ export function TableHome() {
                         <Avatar src={IconHome}/>
                         <Text className="TableHome-group__title">Home</Text>
                     </Group>
-                    <TableHomeTable/>
+                    <TableCategory category={'Home'}/>
                 </Paper>
             </Container>
         </div>

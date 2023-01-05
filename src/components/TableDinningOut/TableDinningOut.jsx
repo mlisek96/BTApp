@@ -1,5 +1,5 @@
 import {Container, Text, Paper, Avatar, Group} from "@mantine/core";
-import {TableDinningOutTable} from "./TableDinningOutTable";
+import {TableCategory} from "../TableCategory/TableCategory.jsx";
 import IconDinningOut from '../../images/icon-dinning out.png';
 import './TableDinningOut.scss'
 
@@ -13,7 +13,7 @@ export function TableDinningOut() {
                         <Avatar src={IconDinningOut}/>
                         <Text className="TableDinningOut-group__title">Dinning out</Text>
                     </Group>
-                    <TableDinningOutTable />
+                    <TableCategory category={'DinningOut'}/>
                 </Paper>
             </Container>
         </div>
