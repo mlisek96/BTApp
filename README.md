@@ -8,7 +8,7 @@
 
 > 👨‍💻 still working on it... trying to improve development of the app
 
-Click the link and check webpage: https://mlisek96.github.io/BTApp/
+Click the link and check the app: https://mlisek96.github.io/BTApp/
 
 ![demo_screenshot](src/images/demo_BTApp.png)
 
