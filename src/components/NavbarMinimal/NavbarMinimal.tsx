@@ -90,7 +90,7 @@ export function NavbarMinimal() {
             setLogIn(logIn)
             setLogIn(false);
             localStorage.clear();
-            navigate('/');
+            navigate('/BTApp');
         }
     }
 
