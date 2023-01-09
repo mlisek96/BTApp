@@ -1,14 +1,14 @@
 import {RingProgress, Text, Paper, Group} from '@mantine/core';
 import './RingProgressByCategory.scss';
 
-interface StatsRingProps {
-    data: {
-        label: string;
-        stats: string;
-        progress: number;
-        color: string;
-    }[];
-}
+// interface StatsRingProps {
+//     data: {
+//         label: string;
+//         stats: string;
+//         progress: number;
+//         color: string;
+//     }[];
+// }
 
 // export function RingProgressByCategory({data}: StatsRingProps) {
 //     const stats = data.map((stat) => {
@@ -47,8 +47,11 @@ interface StatsRingProps {
 //         </div>
 //     );
 // }
+function getProgress(amount, max) {
+    return (amount / max) * 100
+}
 
-export function RingProgressByCategory() {
+export function RingProgressByCategory({amount, max, category}) {
     return (
         <div>
             <Paper
