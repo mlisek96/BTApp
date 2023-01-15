@@ -10,7 +10,7 @@ export function TableUtilities() {
                 <Paper withBorder shadow="md" radius="md" p="md" classNames='Table__paper'>
                     <Group className='TableUtilities-group'>
                         <Avatar src={IconUtilities}/>
-                        <Text className="TableUtilities-group__title">Utilities</Text>
+                        <Text className="TTableUtilities-group__title">Utilities</Text>
                     </Group>
                     <TableCategory category={'Utilities'}/>
                 </Paper>
