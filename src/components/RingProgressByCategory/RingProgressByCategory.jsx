@@ -1,6 +1,4 @@
 import {RingProgress, Text, Paper, Group} from '@mantine/core';
-import {useBudgets} from "../../contexts/BudgetContext.jsx";
-import {currencyFormatter} from "../../../utils.jsx";
 import './RingProgressByCategory.scss';
 
 // interface StatsRingProps {
@@ -49,37 +47,11 @@ import './RingProgressByCategory.scss';
 //         </div>
 //     );
 // }
-// function getProgress(amount, max) {
-//     return (amount / max) * 100
-// }
+function getProgress(amount, max) {
+    return (amount / max) * 100
+}
 
-export function RingProgressByCategory({max, categories}) {
-    // const {getCategoryExpenses} = useBudgets()
-    // // // const category = categories.forEach(category)
-    // // // const expenses = categories.map(category => {
-    // // //     return getCategoryExpenses(category)
-    // // // })
-    // // // const expenses = categories.forEach(category => {
-    // // //     return getCategoryExpenses(category)
-    // // // })
-    // const category = categories.forEach(category => {
-    //     return category
-    // })
-    //
-    // const expenses = getCategoryExpenses(category)
-    // const amount = getCategoryExpenses(category).reduce(
-    //     (total, expense) => total + expense.amount,
-    //     0
-    // )
-    //
-    // const sections = expenses.map((expense) => {
-    //     return {
-    //         value: getProgress(amount, max),
-    //         color: 'cyan',
-    //         tooltip: `${expense.category} - ${currencyFormatter.format(expense.amount)}`
-    //     }
-    // })
-
+export function RingProgressByCategory({amount, max, category}) {
     return (
         <div>
             <Paper
@@ -94,7 +66,15 @@ export function RingProgressByCategory({max, categories}) {
                         size={150}
                         roundCaps
                         thickness={15}
-                        sections={sections}
+                        sections={[
+                            {value: 10, color: 'cyan', tooltip: 'Documents – 40 Gb'},
+                            {value: 10, color: 'orange', tooltip: 'Apps – 25 Gb'},
+                            {value: 10, color: 'grape', tooltip: 'Other – 15 Gb'},
+                            {value: 10, color: 'blue', tooltip: 'Other – 18 Gb'},
+                            {value: 15, color: 'yellow', tooltip: 'Other – 98 Gb'},
+                            {value: 15, color: 'red', tooltip: 'Other – 10 Gb'},
+                            {value: 15, color: 'pink', tooltip: 'Other – 10 Gb'},
+                        ]}
                     />
 
                     <div>
