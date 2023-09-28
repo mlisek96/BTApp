@@ -1,15 +1,15 @@
 import path from 'path';
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import {vitePluginCharsetUtf} from "./vite_config/vitePluginCharsetUtf";
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+import { vitePluginCharsetUtf } from './vite_config/vitePluginCharsetUtf';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/BTApp/',
+  base: '/',
   server: {
     port: 3000,
   },
-  plugins: [react(), vitePluginCharsetUtf(),],
+  plugins: [react(), vitePluginCharsetUtf()],
   resolve: {
     alias: [{
       find: '$',
