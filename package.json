@@ -23,6 +23,7 @@
     "@mantine/hooks": "^6.0.19",
     "@tabler/icons": "^1.105.0",
     "dayjs": "^1.11.9",
+    "firebase": "^10.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",

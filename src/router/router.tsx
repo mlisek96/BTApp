@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Navigate, Outlet, createBrowserRouter } from 'react-router-dom';
-import { NotFoundPage } from '$/views/404Page';
+import { NotFoundPage } from '$/pages/404Page';
 
 export const router = createBrowserRouter(([{
   path: '/error',
