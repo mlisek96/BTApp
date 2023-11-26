@@ -1,13 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.js'
-import { BudgetsProvider } from "./contexts/BudgetContext.jsx";
-import './index.scss'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.js';
+import { BudgetsProvider } from './contexts/BudgetContext.jsx';
+import './index.scss';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-      <BudgetsProvider>
-          <App />
-      </BudgetsProvider>
-  </React.StrictMode>
-)
+const container = document.getElementById('root') as HTMLElement;
+const root = createRoot(container);
+root.render(
+  <StrictMode>
+    <BudgetsProvider>
+      <App />
+    </BudgetsProvider>
+  </StrictMode>,
+);
