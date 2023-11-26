@@ -1,8 +1,14 @@
 import { Suspense } from 'react';
 import { Navigate, Outlet, createBrowserRouter } from 'react-router-dom';
 import { NotFoundPage } from '$/pages/404Page';
+import { Home } from '$/pages/HeroPage';
+import { authenticatedRoutes } from '$/router/authenticatedRoutes';
+import { unauthenticatedRoutes } from '$/router/unauthenticatedRoutes';
 
 export const router = createBrowserRouter(([{
+  path: '/',
+  element: <Home />,
+}, {
   path: '/error',
   element: <NotFoundPage />,
 }, {
@@ -13,31 +19,8 @@ export const router = createBrowserRouter(([{
       <Outlet />
     </Suspense>
   ),
+  children: [
+    ...unauthenticatedRoutes,
+    ...authenticatedRoutes,
+  ],
 }]));
-
-// export const router = createBrowserRouter([{
-//   path: '/error',
-//   element: <NotFoundPage />,
-// }, {
-//   path: '/login',
-//   element: <LogIn />,
-// }, {
-//   path: '/',
-//   errorElement: <Navigate to="/error" />,
-//   element: <Home />,
-// }, {
-//   path: '/layout',
-//   element: <Layout />,
-//   children: [
-//     { path: '/main-page', element: <MainPage /> },
-//     {  path: 'add-expense', element: <AddExpense /> },
-//     {
-//       path: 'expenses-table,',
-//       children: [
-//         { element: <ExpensesTable />, index: true },
-//         { path: 'categories', element: <ExpensesTableCategory /> },
-//       ],
-//     },
-//   ],
-// },
-// ]);
