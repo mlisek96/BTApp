@@ -2,11 +2,19 @@
 
 🎨full title: BudgetTrackAnalyze App
 
- **APP CONCEPT:** A web application that allows you to budget, track and analyze your expenses, with options to categorize and present expenditures in appropriate time periods.
+**APP CONCEPT:** A web application that allows you to budget, track and analyze your expenses, with options to categorize and present expenditures in appropriate time periods.
 
-## 🦊 DEMO
 
-> 👨‍💻 still working on it... trying to improve development of the app
+## 📢🚨 Warning 🚨📢
+
+**🛠️🦺👨‍💻🚀APP IS UNDER HUGE REFACTORING PROCESS 🚀👨‍💻🦺🛠️**
+
+![demo_screenshot](src/images/under_construction.gif)
+
+
+---
+
+## 🦊 OLD WORKING DEMO
 
 Click the link and check the app: https://mlisek96.github.io/BTApp/
 
@@ -17,7 +25,7 @@ Click the link and check the app: https://mlisek96.github.io/BTApp/
 **Happy analyzing!** 📊
 **Hope you would like it!** 🫶
 
-## 📓 TECHNOLOGIES
+### 📓 OLD USED TECHNOLOGIES
 
 * React.js with Hooks, Context, BrowserRouter, Links and more
 * SASS
@@ -25,7 +33,7 @@ Click the link and check the app: https://mlisek96.github.io/BTApp/
 * Vite
 * Mantaine library
 
-## 📦 QUICK PROJECT REVIEW
+### 📦 OLD QUICK PROJECT REVIEW
 
 * #### Hero Page:
   Which you can see above contain welcoming, started button, pic and page-footer(copyrights and link to my GitHub profile)
@@ -45,11 +53,14 @@ Click the link and check the app: https://mlisek96.github.io/BTApp/
 * #### 404 Page:
   contain short description and button to hero/home page, depends on login validation
 
-## 💾 INSTALLATION
+### 💾 INSTALLATION
 
 1) git clone https://github.com/mlisek96/BTApp.git
 2) npm install
 3) npm run dev
+
+---
+
 ## 👮‍♂️ LICENSE
 
 See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
